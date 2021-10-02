@@ -1,0 +1,219 @@
+
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    max-width:1280px;
+    font-size:16px;
+}
+
+@font-face {
+    font-family:myfont;
+    src: url(Volkhov-Regular.ttf);
+}
+body{
+    font-family:myfont;
+    height:90vw; 
+    display:flex;
+    flex-direction:row;
+    justify-content:space-evenly;
+    align-items:flex-start;
+    flex-wrap:wrap;
+    background: #684275;
+    position: relative;
+    
+}
+.background{
+    background-image: url(images/44c88d839081875e137dc0f8d3c461be.webp);
+    background-size:100% 100% ;
+    background-repeat: no-repeat;
+    background-position:center top;
+    width:100%;
+    height:450px;
+    align-self: flex-start;
+    box-shadow: 0px 10px 21px #1f1f1f;
+}
+.toggle{
+    width:25px;
+    height:25px;
+    background-color:#6f477d;
+    position: absolute;
+    border-radius: 50%;
+    top:20px;
+    left: 20px;
+    cursor: pointer;
+}
+.secondtoggle{
+    display:none;
+    width: 25px;
+    height: 25px;
+    background-color: #6f477d;
+    position: absolute;
+    border-radius: 50%;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+}
+/* point number style :::::::::::::::::::::: */
+.pointnumber{
+    width: 16%;
+    height: 15vw;
+    border-radius: 50px;
+    background: linear-gradient(45deg, #5e3b69, #6f477d);
+    box-shadow:  22px -22px 44px #462c4e,
+             -22px 22px 44px #8a589c;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    transition:all .5s ease-in-out;
+}
+.pointnumber .show{
+    font-size:2em;
+}
+.pointnumber .bot{
+    display:flex;
+    justify-content:space-evenly;
+    align-items: center;
+    width:100%;
+}
+.pointnumber .bot .childbot{
+    font-size:1.5em;
+    cursor: pointer;
+}
+/* crypto currency ::::::::::::::::::::::::::: */
+.crypto{
+    width: 4%;
+    height: 4vw;
+    border-radius: 50px;
+    background: linear-gradient(45deg, #5e3b69, #6f477d);
+    box-shadow:  22px -22px 44px #462c4e,
+             -22px 22px 44px #8a589c;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    transition:all .5s ease-in-out;
+}
+
+.crypto .icon1{
+    position:absolute;
+    font-size:.9em;
+    transition:all .5s ease-in-out;
+}
+.crypto .icon2{
+    position:absolute;
+    font-size:.9em;
+    transition:all .5s ease-in-out;
+    display: none;
+}
+/* tron section crypto ::::::::::::::::::::::::::::::: */
+.crypto .tron{
+    display:none;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    flex-wrap: nowrap;
+    width: 100px;
+}
+.tron .tronprice{
+    font-size: .8em;
+    color:#38b000;
+    font-weight:bold;
+    animation:tronprice 5s infinite 1s ease-out;
+}
+@keyframes tronprice {
+    from{filter: drop-shadow(0 0 0)}
+    to{filter: drop-shadow(0 0 5px #38b000);}
+}
+/* bitCion section crypto ::::::::::::::::::::::::::::::: */
+.crypto .bitcoin{
+    display:none;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    flex-wrap: nowrap;
+    width: 135px;
+}
+.bitcoin .bitcoinprice{
+    font-size: .8em;
+    color:#38b000;
+    font-weight:bold;
+    animation:bitcoinprice 5s infinite 1s ease-out;
+}
+@keyframes bitcoinprice {
+    from{filter: drop-shadow(0 0 0)}
+    to{filter: drop-shadow(0 0 5px #38b000);}
+}
+/* etherium section crypto ::::::::::::::::::::::::::::::: */
+.crypto .eterium{
+    display:none;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    flex-wrap: nowrap;
+    width: 139px;
+}
+.eterium .eteriumprice{
+    font-size: .8em;
+    color:#38b000;
+    font-weight:bold;
+    animation:eteriumprice 5s infinite 1s ease-out;
+}
+@keyframes eteriumprice {
+    from{filter: drop-shadow(0 0 0)}
+    to{filter: drop-shadow(0 0 5px #38b000);}
+}
+/* dogCoin section crypto ::::::::::::::::::::::::::::::: */
+.crypto .dogcoin{
+    display:none;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    flex-wrap: nowrap;
+    width: 128px;
+}
+.dogcoin .dogcoinprice{
+    font-size: .8em;
+    color:#38b000;
+    font-weight:bold;
+    animation:eteriumprice 5s infinite 1s ease-out;
+}
+@keyframes dogcoinprice {
+    from{filter: drop-shadow(0 0 0)}
+    to{filter: drop-shadow(0 0 5px #38b000);}
+}
+/* shibaino section crypto ::::::::::::::::::::::::::::::: */
+.crypto .shiba{
+    display:none;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    flex-wrap: nowrap;
+    width: 152px;
+}
+.shiba .shibaprice{
+    font-size: .8em;
+    color:#38b000;
+    font-weight:bold;
+    animation:shibaprice 5s infinite 1s ease-out;
+}
+@keyframes shibaprice {
+    from{filter: drop-shadow(0 0 0)}
+    to{filter: drop-shadow(0 0 5px #38b000);}
+}
+.price{
+    width: 16%;
+    height: 15vw;
+    border-radius: 50px;
+    background: linear-gradient(45deg, #5e3b69, #6f477d);
+    box-shadow:  22px -22px 44px #462c4e,
+             -22px 22px 44px #8a589c;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    transition:all .5s ease-in-out;
+}
