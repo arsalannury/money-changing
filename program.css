@@ -117,6 +117,17 @@ body{
     align-items: flex-end;
     flex-wrap: nowrap;
     width: 100px;
+     transition:all .5s ease;
+     border-radius: 3px;
+}
+.tron:hover{
+    transform:translateY(10px);
+   box-shadow: inset 400px 0 0 0 #70e000;
+}
+.tron:hover .tronprice{
+    animation: none;
+    color:#000;
+    font-weight: unset;
 }
 .tron .tronprice{
     font-size: .8em;
@@ -136,6 +147,17 @@ body{
     align-items: flex-end;
     flex-wrap: nowrap;
     width: 135px;
+    transition:all .5s ease;
+    border-radius: 3px;
+}
+.bitcoin:hover{
+    transform:translateY(10px);
+   box-shadow: inset 400px 0 0 0 #70e000;
+}
+.bitcoin:hover .bitcoinprice{
+    animation: none;
+    color:#000;
+    font-weight: unset;
 }
 .bitcoin .bitcoinprice{
     font-size: .8em;
@@ -155,6 +177,17 @@ body{
     align-items: flex-end;
     flex-wrap: nowrap;
     width: 139px;
+    transition:all .5s ease;
+    border-radius: 3px;
+}
+.eterium:hover{
+    transform:translateY(10px);
+   box-shadow: inset 400px 0 0 0 #70e000;
+}
+.eterium:hover .eteriumprice{
+    animation: none;
+    color:#000;
+    font-weight: unset;
 }
 .eterium .eteriumprice{
     font-size: .8em;
@@ -174,6 +207,17 @@ body{
     align-items: flex-end;
     flex-wrap: nowrap;
     width: 128px;
+    transition:all .5s ease;
+    border-radius: 3px;
+}
+.dogcoin:hover{
+    transform:translateY(10px);
+   box-shadow: inset 400px 0 0 0 #70e000;
+}
+.dogcoin:hover .dogcoinprice{
+    animation: none;
+    color:#000;
+    font-weight: unset;
 }
 .dogcoin .dogcoinprice{
     font-size: .8em;
@@ -193,6 +237,17 @@ body{
     align-items: flex-end;
     flex-wrap: nowrap;
     width: 152px;
+    transition:all .5s ease;
+    border-radius: 3px;
+}
+.shiba:hover{
+    transform:translateY(10px);
+   box-shadow: inset 400px 0 0 0 #70e000;
+}
+.shiba:hover .shibaprice{
+    animation: none;
+    color:#000;
+    font-weight: unset;
 }
 .shiba .shibaprice{
     font-size: .8em;
@@ -216,4 +271,12 @@ body{
     justify-content: space-evenly;
     align-items: center;
     transition:all .5s ease-in-out;
+    position: relative;
+}
+
+.price .dollar{
+  position: absolute;
+  right: 48%;
+  top: 80%;
+  font-size: .9em;
 }

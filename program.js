@@ -1,24 +1,4 @@
-const show = document.querySelector('.show');
-show.innerText = 0;
-const iconFirst = document.querySelector('#icon1');
-const iconSecond = document.querySelector('#icon2');
 
-iconSecond.addEventListener('click', () => {
-    show.innerText++
-    if (show.innerText >= 21) {
-        show.innerText = 0;
-    } else {
-
-    }
-});
-iconFirst.addEventListener('click', () => {
-    show.innerText--
-    if (show.innerText <= -1) {
-        show.innerText = 0;
-    } else {
-
-    }
-});
 
 // :::::::::::
 // change background site
@@ -101,7 +81,7 @@ const showCurrency = {
 
             this.iconPlus.style.display = 'none'
             
-            this.cryptoElement.style.width = '12%' ;
+            this.cryptoElement.style.width = '13%' ;
             this.cryptoElement.style.height = '29vw' ;
 
             setTimeout(() => {
@@ -136,3 +116,99 @@ const showCurrency = {
 }
 showCurrency.closeMenu();
 showCurrency.showMenu();
+
+
+// ::::::::::::::::::::::::
+// crypto add name after click
+// ::::::::::::::::::::::::
+const cryptoNames = {
+
+    containerCrypto : document.querySelector('.crypto') ,
+    textPrice : document.querySelector('.textprice') ,
+
+   addNameCrypto(){
+       this.containerCrypto.children[2].addEventListener('click' ,(e) => {
+          this.textPrice.innerText = 'Tron';
+          show.innerText = 1;
+          allprice.innerText = 1;
+       })
+
+       this.containerCrypto.children[3].addEventListener('click',(e) => {
+           this.textPrice.innerText = 'BitCoin';
+           show.innerText = 1;
+           allprice.innerText = 46000;
+       })
+
+       this.containerCrypto.children[4].addEventListener('click' ,(e) => {
+           this.textPrice.innerText = 'Ethereum';
+           show.innerText = 1;
+           allprice.innerText = 3140;
+       })
+
+       this.containerCrypto.children[5].addEventListener('click',(e) => {
+           this.textPrice.innerText = 'DogCoin';
+           show.innerText = 1;
+           allprice.innerText = 23;
+       })
+
+       this.containerCrypto.children[6].addEventListener('click',(e) => {
+           this.textPrice.innerText = 'Shibaino';
+           show.innerText = 1;
+           allprice.innerText = 2
+       })
+   }
+}
+cryptoNames.addNameCrypto();
+
+
+// ::::::::::::::::::::::
+// point number section code
+// ::::::::::::::::::::::
+
+// ::::::::::::::: variables for this prpgram
+const show = document.querySelector('.show');
+show.innerText = 0 ;
+const iconFirst = document.querySelector('#icon1');
+const iconSecond = document.querySelector('#icon2');
+const textprice = document.querySelector('.textprice');
+const allprice = document.querySelector('.allprice');
+allprice.innerText = 0 ;
+// ::::::::::::::: end variables for this prpgram
+
+iconSecond.addEventListener('click', () => {
+    // ::::::::::::::::: plus number
+    show.innerText++ ; 
+    show.innerText >= 101 ?  show.innerText = 0 : null;
+  if(textprice.innerText === 'Tron'){
+    allprice.innerText++
+  }else if(textprice.innerText === 'BitCoin' ){
+      allprice.innerText = show.innerText * 46000
+      
+  }else if(textprice.innerText === 'Ethereum'){
+      allprice.innerText = show.innerText * 3140
+  }else if(textprice.innerText === 'DogCoin'){
+      allprice.innerText = show.innerText * 23
+  }else if(textprice.innerText === 'Shibaino'){
+      allprice.innerText = show.innerText * 2
+  }
+      
+});
+
+iconFirst.addEventListener('click', () => {
+    // ::::::::::::::::: minus number
+    show.innerText--
+    show.innerText <= -1 ? show.innerText = 0 : null ;
+    
+   if(textprice.innerText === 'Tron'){
+       allprice.innerText--
+   }else if(textprice.innerText === 'BitCoin'){
+       allprice.innerText = allprice.innerText - 46000
+   }else if(textprice.innerText === 'Ethereum'){
+       allprice.innerText = allprice.innerText - 3140
+   }else if(textprice.innerText === 'DogCoin'){
+       allprice.innerText = allprice.innerText - 23
+   }else if(textprice.innerText === 'Shibaino'){
+       allprice.innerText = allprice.innerText - 2
+   }
+   allprice.innerText < 1  ? allprice.innerText = 0 : null;
+});
