@@ -376,7 +376,7 @@ body{
       width:100%;
       height:100%;
       border-radius: 30px;
-      
+      z-index:1;
   }
   .containermessage .textmessage{
       backdrop-filter: blur(20px) saturate(180%);
@@ -476,12 +476,14 @@ body{
 
   /* ghost animation ::::::::::::::::::::::::::::::::::: */
   .container-ghost {
+    display:none;
     position: absolute;
     top: 35%;
     left: 50%;
     margin-left: -64.5px;
     margin-top: -85.5px;
     border-radius:10px;
+    z-index:1;
   }
   .ghost {
     animation: float 3s ease-out infinite;
@@ -499,7 +501,6 @@ body{
   .shadow {
     animation: shrink 3s ease-out infinite;
     transform-origin: center center;
-   
   }
   ellipse {
     transform-origin: center center;
@@ -520,4 +521,21 @@ body{
   }
   /* ghost animation ::::::::::::::::::::::::::::::::::: */
 
-    /* end style for weloce page ::::::::::::::::::::::::::::::::::::::
+    /* end style for weloce page ::::::::::::::::::::::::::::::::::::::*/
+    .shoppingcart{
+      position: absolute;
+      width:20%;
+      height:20%;
+      top:74%;
+      left:40%;
+      border-radius:3px;
+      display:none;
+      flex-direction:column;
+      justify-content:space-evenly;
+      align-items:center;
+      background: -webkit-linear-gradient(to right, #ccc, #fff);  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #ccc, #fff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    }
+
+    

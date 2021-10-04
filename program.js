@@ -118,11 +118,21 @@ showCurrency.closeMenu();
 showCurrency.showMenu();
 
 
+// ::::::::::::::::::::::::::::::::::::
+// build cart for buy cryptoCurrency
+// :::::::::::::::::::::::::::::::::::
+
+const cart = document.createElement('i');
+cart.setAttribute('class','fas fa-shopping-cart  cart  hvr-wobble-to-top-right');
+document.body.appendChild(cart);
+
+
+
 // ::::::::::::::::::::::::
 // crypto add name after click
 // ::::::::::::::::::::::::
 const cryptoNames = {
-
+    shopName : document.querySelector('.shopname') , // crypto name in cart
     containerCrypto : document.querySelector('.crypto') ,
     textPrice : document.querySelector('.textprice') ,
 
@@ -131,41 +141,53 @@ const cryptoNames = {
           this.textPrice.innerText = 'Tron';
           show.innerText = 1;
           allprice.innerText = 1;
+         // cart show ::::::::::::::::::::::
+          this.shopName.innerText = 'Tron';
+          shopPrice.innerText = 1;
        })
 
        this.containerCrypto.children[3].addEventListener('click',(e) => {
            this.textPrice.innerText = 'BitCoin';
            show.innerText = 1;
            allprice.innerText = 46000;
+           // cart show ::::::::::::::::::::::
+            this.shopName.innerText = 'BitCoin';
+            shopPrice.innerText = 46000;
        })
 
        this.containerCrypto.children[4].addEventListener('click' ,(e) => {
            this.textPrice.innerText = 'Ethereum';
            show.innerText = 1;
            allprice.innerText = 3140;
+           // cart show ::::::::::::::::::::::
+           this.shopName.innerText = 'Ethereum';
+           shopPrice.innerText = 3140;
        })
 
        this.containerCrypto.children[5].addEventListener('click',(e) => {
            this.textPrice.innerText = 'DogCoin';
            show.innerText = 1;
            allprice.innerText = 23;
+           // cart show ::::::::::::::::::::::
+           this.shopName.innerText = 'DogCoin';
+           shopPrice.innerText = 23;
        })
 
        this.containerCrypto.children[6].addEventListener('click',(e) => {
            this.textPrice.innerText = 'Shibaino';
            show.innerText = 1;
-           allprice.innerText = 2
+           allprice.innerText = 2;
+            // cart show ::::::::::::::::::::::
+           this.shopName.innerText = 'Shibaino';
+           shopPrice.innerText = 2;
        })
    }
 }
 cryptoNames.addNameCrypto();
 
 
-// ::::::::::::::::::::::
-// point number section code
-// ::::::::::::::::::::::
-
-// ::::::::::::::: variables for this prpgram
+// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: plus minus numbers 
+// ::::::::::::::: variables for this program
 const show = document.querySelector('.show');
 show.innerText = 0 ;
 const iconFirst = document.querySelector('#icon1');
@@ -173,60 +195,110 @@ const iconSecond = document.querySelector('#icon2');
 const textprice = document.querySelector('.textprice');
 const allprice = document.querySelector('.allprice');
 allprice.innerText = 0 ;
-// ::::::::::::::: end variables for this prpgram
+const shopPrice = document.querySelector('.shopprice'); // crypto price in cart
+
 
 iconSecond.addEventListener('click', () => {
-    // ::::::::::::::::: plus number
+    // ::::::::::::::::: plus number of crypto currency
     show.innerText++ ; 
     show.innerText >= 101 ?  show.innerText = 0 : null;
+
   if(textprice.innerText === 'Tron'){
     allprice.innerText++
+    shopPrice.innerText++
   }else if(textprice.innerText === 'BitCoin' ){
-      allprice.innerText = show.innerText * 46000
-      
+      allprice.innerText = show.innerText * 46000 
+      shopPrice.innerText = show.innerText * 46000 
+
   }else if(textprice.innerText === 'Ethereum'){
       allprice.innerText = show.innerText * 3140
+      shopPrice.innerText = show.innerText * 3140
+
   }else if(textprice.innerText === 'DogCoin'){
       allprice.innerText = show.innerText * 23
+      shopPrice.innerText = show.innerText * 23
+
   }else if(textprice.innerText === 'Shibaino'){
       allprice.innerText = show.innerText * 2
+      shopPrice.innerText = show.innerText * 2
   }
       
 });
 
 iconFirst.addEventListener('click', () => {
-    // ::::::::::::::::: minus number
+    // ::::::::::::::::: minus number of crypto currency
     show.innerText--
     show.innerText <= -1 ? show.innerText = 0 : null ;
     
    if(textprice.innerText === 'Tron'){
-       allprice.innerText--
+       allprice.innerText--;
+       shopPrice.innerText--;
    }else if(textprice.innerText === 'BitCoin'){
-       allprice.innerText = allprice.innerText - 46000
+       allprice.innerText = allprice.innerText - 46000;
+       shopPrice.innerText = allprice.innerText - 46000;
    }else if(textprice.innerText === 'Ethereum'){
-       allprice.innerText = allprice.innerText - 3140
+       allprice.innerText = allprice.innerText - 3140;
+       shopPrice.innerText = allprice.innerText - 3140;
    }else if(textprice.innerText === 'DogCoin'){
-       allprice.innerText = allprice.innerText - 23
+       allprice.innerText = allprice.innerText - 23;
+       shopPrice.innerText = allprice.innerText - 23;
    }else if(textprice.innerText === 'Shibaino'){
-       allprice.innerText = allprice.innerText - 2
+       allprice.innerText = allprice.innerText - 2;
+       shopPrice.innerText = allprice.innerText - 2;
    }
    allprice.innerText < 1  ? allprice.innerText = 0 : null;
+   shopPrice.innerText < 1  ? shopPrice.innerText = 0 : null;
 });
+// ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+ 
 
-// ::::::::::::::::::::::::::::::::::::
-// build cart for buy cryptoCurrency
 // :::::::::::::::::::::::::::::::::::
-
-const cart = document.createElement('i');
-cart.setAttribute('class','fas fa-shopping-cart  cart  hvr-wobble-to-top-right');
-document.body.appendChild(cart); 
-
+// welcome page functions
+// :::::::::::::::::::::::::::::::::::
+const welcomePage = document.querySelector('.containermessage');
+const ghostAnime = document.querySelector('.container-ghost');
 
 function loadPageMessage(){
-
     window.addEventListener('load',(e) => {
-    
-    
+    welcomePage.style.display = 'flex';
+    ghostAnime.style.display = 'unset';
     })
 }
 loadPageMessage();
+
+function clickButtons(){
+    const yes = document.querySelector('.yes');
+    const no = document.querySelector('.no');
+
+    yes.addEventListener('click',() => {
+        document.write('<h1 style=color:red;margin:20% 0 0 60%;>Sorry iranian user we should say good bye</h1>')
+        setTimeout(() => {
+            close()
+        },4000)
+    })
+
+    no.addEventListener('click',() => {
+        setTimeout(() => {
+            welcomePage.style.display = 'none';
+            ghostAnime.style.display = 'none' ;
+        },2000)
+    })
+}
+clickButtons();
+
+
+// :::::::::::::::::::::
+// show cart for buy crypto 
+// :::::::::::::::::::::
+
+
+const showCart = {
+   shoppingCart : document.querySelector('.shoppingcart') ,
+   cartIcon : document.querySelector('.cart') ,
+   resultCart(){
+       this.cartIcon.addEventListener('click',(e) => {
+       this.shoppingCart.style.display = 'flex';
+       })
+   }
+}
+showCart.resultCart();
