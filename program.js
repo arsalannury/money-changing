@@ -212,3 +212,21 @@ iconFirst.addEventListener('click', () => {
    }
    allprice.innerText < 1  ? allprice.innerText = 0 : null;
 });
+
+// ::::::::::::::::::::::::::::::::::::
+// build cart for buy cryptoCurrency
+// :::::::::::::::::::::::::::::::::::
+
+const cart = document.createElement('i');
+cart.setAttribute('class','fas fa-shopping-cart  cart  hvr-wobble-to-top-right');
+document.body.appendChild(cart); 
+
+
+function loadPageMessage(){
+
+    window.addEventListener('load',(e) => {
+    
+    
+    })
+}
+loadPageMessage();

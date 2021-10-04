@@ -280,3 +280,244 @@ body{
   top: 80%;
   font-size: .9em;
 }
+
+.cart{
+    position:fixed;
+    background-color:#fff;
+    padding:9px;
+    border-radius: 50%;
+    top:90%;
+    left:1%;
+    cursor:pointer;
+}
+
+
+/* Wobble To Top Right */
+@-webkit-keyframes hvr-wobble-to-top-right {
+    16.65% {
+      -webkit-transform: translate(8px, -8px);
+      transform: translate(8px, -8px);
+    }
+    33.3% {
+      -webkit-transform: translate(-6px, 6px);
+      transform: translate(-6px, 6px);
+    }
+    49.95% {
+      -webkit-transform: translate(4px, -4px);
+      transform: translate(4px, -4px);
+    }
+    66.6% {
+      -webkit-transform: translate(-2px, 2px);
+      transform: translate(-2px, 2px);
+    }
+    83.25% {
+      -webkit-transform: translate(1px, -1px);
+      transform: translate(1px, -1px);
+    }
+    100% {
+      -webkit-transform: translate(0, 0);
+      transform: translate(0, 0);
+    }
+  }
+  @keyframes hvr-wobble-to-top-right {
+    16.65% {
+      -webkit-transform: translate(8px, -8px);
+      transform: translate(8px, -8px);
+    }
+    33.3% {
+      -webkit-transform: translate(-6px, 6px);
+      transform: translate(-6px, 6px);
+    }
+    49.95% {
+      -webkit-transform: translate(4px, -4px);
+      transform: translate(4px, -4px);
+    }
+    66.6% {
+      -webkit-transform: translate(-2px, 2px);
+      transform: translate(-2px, 2px);
+    }
+    83.25% {
+      -webkit-transform: translate(1px, -1px);
+      transform: translate(1px, -1px);
+    }
+    100% {
+      -webkit-transform: translate(0, 0);
+      transform: translate(0, 0);
+    }
+  }
+  .hvr-wobble-to-top-right {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  }
+  .hvr-wobble-to-top-right:hover, .hvr-wobble-to-top-right:focus, .hvr-wobble-to-top-right:active {
+    -webkit-animation-name: hvr-wobble-to-top-right;
+    animation-name: hvr-wobble-to-top-right;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+  }
+ 
+  /* style for weloce page :::::::::::::::::::::::::::::::::::::: */
+  .containermessage{
+      display: flex;
+      flex-direction:column;
+      justify-content:flex-start;
+      align-items:center;
+      flex-wrap:wrap;
+      position: absolute;
+      background-image:url(images/c21e16707c4016fdf054cc0816e4d661.webp);
+      padding:50px;
+      width:100%;
+      height:100%;
+      border-radius: 30px;
+      
+  }
+  .containermessage .textmessage{
+      backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
+      background-color: rgba(255, 255, 255, 0.62);
+      border-radius: 12px;
+      border: 1px solid rgba(209, 213, 219, 0.3);
+      display:flex;
+      flex-direction:column;
+      justify-content: space-around;
+      align-items: center;
+      padding:10px;
+  }
+  .textmessage h3{
+      margin-bottom:10px;
+      color:#E63946;
+      font-size:2em;
+  }
+   .textmessage .p2{
+       margin-top:4px;
+   }
+  
+   .containermessage  .buttonmessage{
+       width:15%;
+       height:3vw;
+       display:flex;
+       flex-direction:row;
+       justify-content:space-evenly;
+       align-items:center;
+       margin-top:20px;
+
+   }
+   .buttonmessage .yes{
+       user-select:none;
+       padding:6px 10px;
+       text-align: center;
+       background-color:#684275;
+       border-radius: 2px;
+       cursor: pointer;
+
+   }
+   .yes:active{
+       background-color:#70e000;
+   }
+   .buttonmessage .no{
+       user-select:none;
+       padding:6px 10px;
+       text-align: center;
+       background-color:#684275;
+       border-radius: 2px;
+       cursor: pointer;
+   }
+   .no:active{
+    background-color:#E63946;
+}
+   .hvr-float-shadow {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+  }
+  .hvr-float-shadow:before {
+    pointer-events: none;
+    position: absolute;
+    z-index: -1;
+    content: '';
+    top: 100%;
+    left: 5%;
+    height: 10px;
+    width: 90%;
+    opacity: 0;
+    background: -webkit-radial-gradient(center, ellipse, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+    /* W3C */
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform, opacity;
+    transition-property: transform, opacity;
+  }
+  .hvr-float-shadow:hover, .hvr-float-shadow:focus, .hvr-float-shadow:active {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+    /* move the element up by 5px */
+  }
+  .hvr-float-shadow:hover:before, .hvr-float-shadow:focus:before, .hvr-float-shadow:active:before {
+    opacity: 1;
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);
+    /* move the element down by 5px (it will stay in place because it's attached to the element that also moves up 5px) */
+  }
+
+  /* ghost animation ::::::::::::::::::::::::::::::::::: */
+  .container-ghost {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    margin-left: -64.5px;
+    margin-top: -85.5px;
+    border-radius:10px;
+  }
+  .ghost {
+    animation: float 3s ease-out infinite;
+  }
+  
+  @keyframes float {
+    50% {
+       transform: translate(0, 20px);
+    }
+  }
+  .shadowFrame {
+    width: 130px;
+    margin-top: 15px;
+  }
+  .shadow {
+    animation: shrink 3s ease-out infinite;
+    transform-origin: center center;
+   
+  }
+  ellipse {
+    transform-origin: center center;
+  }
+  @keyframes shrink {
+    0% {
+      width: 90%;
+      margin: 0 5%;
+    }
+    50% {
+      width: 60%;
+      margin: 0 18%;
+    }
+    100% {
+      width: 90%;
+      margin: 0 5%;
+    }
+  }
+  /* ghost animation ::::::::::::::::::::::::::::::::::: */
+
+    /* end style for weloce page ::::::::::::::::::::::::::::::::::::::
