@@ -607,3 +607,19 @@ body{
       -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
       transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
     }
+
+    .warning{ 
+        display: none;
+        font-size: .6em;
+        opacity: 70%;
+        color: #d00000;
+        position: absolute;
+        top: 44%;
+    }
+    .lengthlink{
+      position: absolute;
+      top: 90%;
+      font-size: 0.8em;
+      left: 5%;
+      color: #d00000;
+    }

@@ -292,13 +292,45 @@ clickButtons();
 // :::::::::::::::::::::
 
 
-const showCart = {
+const showAndCloseCart = {
    shoppingCart : document.querySelector('.shoppingcart') ,
    cartIcon : document.querySelector('.cart') ,
-   resultCart(){
+   closeIcon : document.querySelector('.closeiconcart') ,
+   showCart(){
        this.cartIcon.addEventListener('click',(e) => {
        this.shoppingCart.style.display = 'flex';
        })
+   } ,
+   closeCart(){
+       this.closeIcon.addEventListener('click',() => {
+       this.shoppingCart.style.display = 'none';
+       })
    }
 }
-showCart.resultCart();
+showAndCloseCart.showCart();
+showAndCloseCart.closeCart();
+
+// :::::::::::::::::: 
+// wallet link section setting length and message for length of charecter
+// :::::::::::::::::
+
+const walletAddress = {
+    input : document.querySelector('.walletlink') ,
+    lengthLink : document.querySelector('.lengthlink') ,
+    wallet(){
+       
+    this.input.addEventListener('input',(e) => {
+      this.lengthLink.innerText = e.target.value.length ;
+     if(e.target.value.length > 100){
+        e.target.value = '' ;
+        this.lengthLink.innerText = null ;
+        document.querySelector('.warning').style.display = 'inline' ;
+     }else{
+        document.querySelector('.warning').style.display = 'none' ;
+     }
+    })
+       
+    }  
+}
+walletAddress.wallet()
+
