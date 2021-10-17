@@ -296,6 +296,8 @@ const showAndCloseCart = {
    shoppingCart : document.querySelector('.shoppingcart') ,
    cartIcon : document.querySelector('.cart') ,
    closeIcon : document.querySelector('.closeiconcart') ,
+   walletLink : document.querySelector('.walletlink') ,
+   lengthLink : document.querySelector('.lengthlink') ,
    showCart(){
        this.cartIcon.addEventListener('click',(e) => {
        this.shoppingCart.style.display = 'flex';
@@ -304,6 +306,8 @@ const showAndCloseCart = {
    closeCart(){
        this.closeIcon.addEventListener('click',() => {
        this.shoppingCart.style.display = 'none';
+       this.walletLink.value = null;
+       this.lengthLink.innerText = 0
        })
    }
 }
@@ -334,11 +338,35 @@ const walletAddress = {
 }
 walletAddress.wallet()
 
-const addToWalletButton = {
-    button : document.querySelector('.buybutton') ,
-    clicked(){
-        this.button.addEventListener('click',(e) => {
-            
-        })
+
+
+// :::::::::::::
+//  show error if link is invalid
+// link value is 0 after loa page
+// :::::::::::::
+
+const buyButton = document.querySelector('.buybutton');
+const walletLink = document.querySelector('.walletlink');
+const alertLink = document.querySelector('.alertlink');
+const alertButton = document.querySelector('.alertbutton');
+const shopName = document.querySelector('.shopname');
+
+buyButton.addEventListener('click',(e) => {
+    if(shopName.innerText === '') return;
+       
+    if(walletLink.value.length <= 20){
+     alertLink.style.display = 'flex';
+    }else{
+        location.href = '../html/paypage.html'
+        walletLink.value = null;
     }
-}
+     
+})
+
+alertButton.addEventListener('click',(e) => {
+  alertLink.style.display = 'none'
+})
+
+window.addEventListener('load',(e) => {
+    walletLink.value = null;
+})
