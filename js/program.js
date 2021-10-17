@@ -271,7 +271,7 @@ function clickButtons(){
     const no = document.querySelector('.no');
 
     yes.addEventListener('click',() => {
-        document.write('<h1 style=color:red;margin:20% 0 0 60%;>Sorry iranian user we should say good bye</h1>')
+        document.write('<h1 style=color:#d00000;margin:20% 0 0 60%;>Sorry iranian user we should say good bye</h1>')
         setTimeout(() => {
             close()
         },4000)
@@ -334,3 +334,11 @@ const walletAddress = {
 }
 walletAddress.wallet()
 
+const addToWalletButton = {
+    button : document.querySelector('.buybutton') ,
+    clicked(){
+        this.button.addEventListener('click',(e) => {
+            
+        })
+    }
+}

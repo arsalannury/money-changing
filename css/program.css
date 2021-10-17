@@ -9,7 +9,7 @@
 
 @font-face {
     font-family:myfont;
-    src: url(Volkhov-Regular.ttf);
+    src: url(../Volkhov-Regular.ttf);
 }
 body{
     font-family:myfont;
@@ -24,7 +24,7 @@ body{
     
 }
 .background{
-    background-image: url(images/44c88d839081875e137dc0f8d3c461be.webp);
+    background-image: url(../images/44c88d839081875e137dc0f8d3c461be.webp);
     background-size:100% 100% ;
     background-repeat: no-repeat;
     background-position:center top;
@@ -371,7 +371,7 @@ body{
       align-items:center;
       flex-wrap:wrap;
       position: absolute;
-      background-image:url(images/c21e16707c4016fdf054cc0816e4d661.webp);
+      background-image:url(../images/c21e16707c4016fdf054cc0816e4d661.webp);
       padding:50px;
       width:100%;
       height:100%;
