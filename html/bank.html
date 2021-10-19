@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="peyment page cart bank">
+    <meta name="description" content=" ">
+    <link href="css/hover-min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/bank.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.6/animate.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <title>Bank</title>
+</head>
+<body>
+    
+    <div class="banks">
+
+        <div class="fbank">
+            <i class="far fa-credit-card bankicon"></i>
+            <span class="fbankname">Central USA Bank</span>
+        </div>
+
+        <div class="sbank">
+            <i class="far fa-credit-card bankicon"></i>
+            <span class="sbankname">Bank of America</span>
+        </div>
+
+        <div class="tbank">
+            <i class="far fa-credit-card bankicon"></i>
+            <span class="tbankname">Citi Bank</span>
+        </div>
+         
+        <div class="other-payment">
+            <i class="fab fa-cc-paypal paypal"></i>
+            <i class="fab fa-cc-visa visa"></i>
+            <i class="fab fa-cc-amazon-pay amazon"></i>
+        </div>
+    </div>
+
+
+    <form action="#" class="payment">
+        <label for="cartnumber">Cart Number</label>
+        <input class="cartnumber" type="text" name="cart" id="cart" required placeholder="your Cart Number">
+
+        <label for="cv2">CV2</label>
+        <input class="cv2" type="text" name="cv2" id="cv2" required placeholder="2312">
+
+        <label for="password">password</label>
+        <input class="password" type="password" name="pass" id="pass" required placeholder="cart password">
+        <button class="passwordcreate hvr-underline-from-center">Disposable code</button>
+        <div class="expirationcontainer">
+        <label for="Expiration">Expiration date</label>
+        <input class="expiration" type="text" name="exdate" id="exdate" maxlength="2" required placeholder="month">
+        <input class="expiration" type="text" name="exdate" id="exdate" maxlength="4" required placeholder="year">
+        </div>
+
+        <div class="safecode">
+        <i class="fas fa-sync syncicon"></i>
+        <span class="safetycode"></span>
+        <input class="safetycodeuser" type="text" name="safetycode" id="safetycode" required>
+        </div>
+    </form>
+     
+</body>
+</html>

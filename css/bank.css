@@ -1,0 +1,190 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size:16px;
+    font-family:myfont;
+}
+body{
+    height: 53.5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:#efefef;
+    position: relative;
+}
+@font-face {
+    font-family:myfont;
+    src: url(../Volkhov-Regular.ttf);
+}
+.payment{
+    height: 41vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 20px;
+    width: 35%;
+    border: 1px solid #000;
+    border-radius: 3px;
+    background-color: #fff;
+}
+
+.payment input{
+    width: 90%;
+    height: 3vw;
+    outline: none;
+    font-size:.8em;
+}
+.payment .cartnumber{
+    text-indent:3%;
+}
+.payment .cv2{
+    width: 20%;
+    text-indent:3%;
+}
+.payment .password{
+    text-indent:3%;
+}
+.passwordcreate{
+    font-size: .8em;
+    padding: 6px;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+}
+.payment .expiration{
+    width: 20%;
+    text-indent: 10%;
+}
+.payment .expirationcontainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.payment .safecode{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.payment .safetycode{
+    height: 2.99vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #999;
+    width: 30%;
+    font-size: .8em;
+    text-align: center;
+}
+.payment .safetycodeuser{
+    width: 30%;
+}
+.safecode .syncicon{
+    font-size: .9em;
+    cursor: pointer;
+}
+/* Underline From Center */
+.hvr-underline-from-center {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    overflow: hidden;
+  }
+  .hvr-underline-from-center:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 51%;
+    right: 51%;
+    bottom: 0;
+    background: #70e000;
+    height: 4px;
+    -webkit-transition-property: left, right;
+    transition-property: left, right;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+  }
+  .hvr-underline-from-center:hover:before, .hvr-underline-from-center:focus:before, .hvr-underline-from-center:active:before {
+    left: 0;
+    right: 0;
+  }
+
+
+/* choise your bank ::::::::::::::::::::::::::: */
+
+.banks{
+    position: absolute;
+    top: 5%;
+    left: 2%;
+    width: 15%;
+    padding: 3px;
+    border: 1px solid #000;
+    background-color: #fff;
+    border-radius: 3px;
+}
+.bankicon{
+    transition: all .5s ease;
+}
+.banks .fbank{
+    padding: 5px;
+    height: 4vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+.banks .fbank:hover .bankicon , .sbank:hover .bankicon , .tbank:hover .bankicon{
+    color: #ffbd00;
+}
+
+.banks .sbank{
+    padding: 5px;
+    height: 4vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-right: 7px;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.banks .tbank{
+    padding: 5px;
+    height: 4vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-right: 60px;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.banks .other-payment{
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+}
+.other-payment i {
+    font-size: 20px;
+    transition: all .4s ease;
+    cursor: pointer;
+}
+.other-payment .paypal:hover{
+    color:#0096c7;
+}
+.other-payment .visa:hover{
+    color: #004e89;
+}
+.other-payment .amazon:hover{
+    color:#f7b801;
+}
