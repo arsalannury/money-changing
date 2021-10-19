@@ -115,7 +115,33 @@ body{
     left: 0;
     right: 0;
   }
+  .submitbuttons{
+      width: 100%;
+      display:flex;
+      align-items:center;
+      justify-content: space-evenly;
+      margin-top:10px;
+  }
+  .submitbuttons button{
+      font-size:.8em;
+      padding: 3px 10px;
+      outline: none;
+      cursor: pointer;
+      background-color: #eee;
+      border-radius: 3px;
+      border: none;
+      box-shadow:1px 1px 1px #000;
+      transition:all .5s ease;
+  }
 
+  .submitbuttons .submit:hover{
+   background-color: #70e000;
+   color:#fff;
+  }
+  .submitbuttons .canselsubmit:hover{
+      background-color:#d00000;
+      color:#fff;
+  }
 
 /* choise your bank ::::::::::::::::::::::::::: */
 

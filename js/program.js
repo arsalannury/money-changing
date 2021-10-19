@@ -357,7 +357,7 @@ buyButton.addEventListener('click',(e) => {
     if(walletLink.value.length <= 20){
      alertLink.style.display = 'flex';
     }else{
-        location.href = '../html/paypage.html'
+        location.href = '../html/bank.html'
         walletLink.value = null;
     }
      
