@@ -12,7 +12,7 @@ const cartNumber = document.querySelector('.cartnumber');
 const cv2 = document.querySelector('.cv2');
 const passwordForm = document.querySelector('.password');
 const passwordCreate = document.querySelector('.passwordcreate');
-// const expirationParent = document.querySelector('.expirationcontainer');
+const otherPayment = document.querySelector('.other-payment');
 const expirationOne = document.querySelector('.expiration1'); 
 const expirationTwo = document.querySelector('.expiration2'); 
 const safeCodeSync = document.querySelector('.syncicon');
@@ -157,3 +157,19 @@ function stylesForSubmitBtn(){
     banksInformation.style.display = 'none';
 }
 
+// ::::::::::::::::::::
+// visa - paypal - amazonPay
+// ::::::::::::::::::::
+otherPayment.addEventListener('click',(e) => {
+    if(e.target.nodeName !== 'I') return ;
+
+    if(e.target.className === 'fab fa-cc-paypal paypal'){
+        location.href = 'https://www.paypal.com'
+    }
+    if(e.target.className === 'fab fa-cc-visa visa'){
+        location.href = 'https://www.usa.visa.com'
+    }
+    if(e.target.className === 'fab fa-cc-amazon-pay amazon'){
+        location.href = 'https://www.pay.amazon.com'
+    }
+})
