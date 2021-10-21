@@ -344,6 +344,13 @@ walletAddress.wallet()
 //  show error if link is invalid
 // link value is 0 after loa page
 // :::::::::::::
+function stylesForAddWalletBtn(){
+    document.querySelector('.lds-facebook').style.display = 'inline-block';
+    document.querySelector('.price').style.display = 'none';
+    document.querySelector('.pointnumber').style.display = 'none';
+    document.querySelector('.crypto').style.display = 'none';
+    document.querySelector('.shoppingcart').style.display = 'none';
+}
 
 const buyButton = document.querySelector('.buybutton');
 const walletLink = document.querySelector('.walletlink');
@@ -357,7 +364,10 @@ buyButton.addEventListener('click',(e) => {
     if(walletLink.value.length <= 20){
      alertLink.style.display = 'flex';
     }else{
-        location.href = '../html/bank.html'
+        stylesForAddWalletBtn();
+        setTimeout(() => {
+            location.href = '../html/bank.html'
+        },3000)
         walletLink.value = null;
     }
      
