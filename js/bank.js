@@ -104,13 +104,19 @@ safeCodeSync.addEventListener('click',(e) => {
     safetyCodeCreate.value = Math.floor(Math.random() * 309745 )
 })
 // ::::::::::::::::::::
-// safe code check section
+// safe code check  - submit - cansel button
 // ::::::::::::::::::::
 buttonsform.addEventListener('click',(e) => {
     if(e.target.nodeName != 'BUTTON') return;
-        
+        // submit button :::::::::::::::::::::::::::::::::
     if(e.target.className === 'submit'){
         e.preventDefault();
+
+        if(userBank.length === 0){
+            alertBank.style.display = 'flex';
+            return;
+         }
+
         if(!cartNumber.value  || !passwordForm.value || !cv2.value || !expirationOne.value || !expirationTwo.value || !safetyCodeUser.value ){
            inputsValue.filter(nodeElement => {
                nodeElement.style.border = '1px solid rgba(255, 0, 0, 0.452)'
@@ -133,6 +139,16 @@ buttonsform.addEventListener('click',(e) => {
         },4000)
        
     }
+    
+   // cansel button :::::::::::::::::::::::::::::::::::::
+   if(e.target.className === 'canselsubmit'){
+    inputsValue.forEach(nodeElement => { 
+            nodeElement.value = ''
+    })
+    setTimeout(() => {
+    location.href = '../html/index.html';
+    },1000)
+   }
 })
 
 function stylesForSubmitBtn(){
