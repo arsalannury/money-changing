@@ -42,30 +42,40 @@
 
     <form action="#" class="payment">
         <label for="cartnumber">Cart Number</label>
-        <input class="cartnumber" type="text" name="cart" id="cart" required placeholder="your Cart Number">
+        <input class="cartnumber" type="text" name="cart" id="cart" required placeholder="your Cart Number" minlength="15">
 
         <label for="cv2">CV2</label>
-        <input class="cv2" type="text" name="cv2" id="cv2" required placeholder="2312">
+        <input class="cv2" type="text" name="cv2" id="cv2" required placeholder="2312" maxlength="4" minlength="4">
 
         <label for="password">password</label>
         <input class="password" type="password" name="pass" id="pass" required placeholder="cart password">
         <button class="passwordcreate hvr-underline-from-center">Disposable code</button>
         <div class="expirationcontainer">
         <label for="Expiration">Expiration date</label>
-        <input class="expiration" type="text" name="exdate" id="exdate" maxlength="2" required placeholder="month">
-        <input class="expiration" type="text" name="exdate" id="exdate" maxlength="4" required placeholder="year">
+        <input class="expiration1" type="text" name="exdate" id="exdate" minlength="2" maxlength="2" required placeholder="month">
+        <input class="expiration2" type="text" name="exdate" id="exdate" minlength="4" maxlength="4" required placeholder="year">
         </div>
 
         <div class="safecode">
         <i class="fas fa-sync syncicon"></i>
-        <span class="safetycode"></span>
+        <input class="safetycode" type="text" name="pass" id="pass" readonly>
         <input class="safetycodeuser" type="text" name="safetycode" id="safetycode" required>
+        <span class="alertsafecode animated bounceInDown">! invalid Code !</span>
         </div>
         <div class="submitbuttons">
         <button class="submit" type="submit">send</button>
         <button class="canselsubmit" type="submit">cansel</button>
         </div>
     </form>
-     
+
+    <div class="alertbank animated bounceInDown">
+        <i class="fas fa-times-circle"></i>
+        <h2 class="h2">you should Choose a Bank</h2>
+        <button class="alertbutton hvr-bounce-to-right">ok</button>
+    </div>
+
+    <div class="lds-facebook"><div></div><div></div><div></div></div>
+
+     <script src="../js/bank.js"></script>
 </body>
 </html>
