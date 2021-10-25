@@ -700,4 +700,52 @@ body{
         height: 32px;
       }
     }
-    
+    /* responsive section :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: ::*/
+    @media  screen and (max-width : 500px) {
+      .background {
+        height:210px;
+      }
+      .toggle{
+        width: 20px;
+        height: 20px;
+      }
+      .secondtoggle{
+        width: 20px;
+        height: 20px;
+      }
+      .price{
+        width: 30%;
+        height: 30vw;
+        border-radius: 25px;
+        margin-top: 9%;
+      }
+      .price .dollar{
+        font-size: .7em;
+        right:46%;
+      }
+      .price .allprice{
+        font-size: .9em;
+      }
+      .price .textprice{
+        font-size: .9em;
+      }
+      .pointnumber{
+        width: 30%;
+        height: 30vw;
+        border-radius: 25px;
+        margin-top: 9%;
+      }
+      .pointnumber .show{
+        font-size: 1em;
+      }
+
+      .crypto{
+        top:121%;
+        position: absolute;
+        width: 15%;
+        height: 14vw;
+      }
+      .crypto .tron{
+        margin-top: 22px;
+      }
+    }

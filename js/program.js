@@ -83,7 +83,10 @@ const showCurrency = {
             
             this.cryptoElement.style.width = '13%' ;
             this.cryptoElement.style.height = '29vw' ;
-
+            if(innerWidth <= 500) {
+                this.cryptoElement.style.width = '62%' ;
+                this.cryptoElement.style.height = '60vw' ;
+            }
             setTimeout(() => {
                 this.tron.style.display = 'flex' ;
                 this.cryptoElement.children[3].style.display = 'flex' ;
@@ -104,7 +107,10 @@ const showCurrency = {
 
             this.cryptoElement.style.width = '4%' ;
             this.cryptoElement.style.height = '4vw' ;
-
+            if(innerWidth <= 500) {
+                this.cryptoElement.style.width = '14%' ;
+                this.cryptoElement.style.height = '14vw' ;
+            }
             this.tron.style.display = 'none' ;
             this.cryptoElement.children[3].style.display = 'none' ;
             this.cryptoElement.children[4].style.display = 'none' ;
