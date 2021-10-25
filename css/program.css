@@ -717,7 +717,7 @@ body{
         width: 30%;
         height: 30vw;
         border-radius: 25px;
-        margin-top: 9%;
+        margin-top: 8%;
       }
       .price .dollar{
         font-size: .7em;
@@ -733,19 +733,53 @@ body{
         width: 30%;
         height: 30vw;
         border-radius: 25px;
-        margin-top: 9%;
+        margin-top: 8%;
       }
       .pointnumber .show{
         font-size: 1em;
       }
 
       .crypto{
-        top:121%;
+        top:119%;
         position: absolute;
         width: 15%;
         height: 14vw;
       }
       .crypto .tron{
-        margin-top: 22px;
+        margin-top: 23px;
       }
+      .tron:hover ,
+      .dogcoin:hover,
+      .bitcoin:hover,
+      .eterium:hover{
+        transform: translateY(5px);
+      }
+      .shiba:hover{
+        transform: translateY(2px);
+      }
+      .tron .tronname,
+      .dogcoin .dogcoinname,
+      .bitcoin .bitcoinname,
+      .eterium .eteriumname,
+      .shiba .shibaname{
+        font-size: .9em;
+      }
+    .cart{
+      left: 4%;
+      padding: 7px;
+    }
+    .shoppingcart{
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+    .alertlink{
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 20;
+    }
     }

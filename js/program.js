@@ -85,7 +85,7 @@ const showCurrency = {
             this.cryptoElement.style.height = '29vw' ;
             if(innerWidth <= 500) {
                 this.cryptoElement.style.width = '62%' ;
-                this.cryptoElement.style.height = '60vw' ;
+                this.cryptoElement.style.height = '58vw' ;
             }
             setTimeout(() => {
                 this.tron.style.display = 'flex' ;
