@@ -701,9 +701,30 @@ body{
       }
     }
     /* responsive section :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: ::*/
-    @media  screen and (max-width : 500px) {
+    @media  screen and (max-width : 474px) {
       .background {
         height:210px;
+      }
+      .containermessage{
+        height: 106vh;
+      }
+      .containermessage .textmessage{
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .containermessage .buttonmessage{
+        width: 75%;
+        margin-left: 5%;
+      }
+      .container-ghost{
+        top: 118%;
+        margin-left: -36.6px;
+      }
+      .container-ghost .ghost{
+        width: 60%;
+      }
+      .shadowFrame{
+        width: 73px;
       }
       .toggle{
         width: 20px;

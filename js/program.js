@@ -277,7 +277,11 @@ function clickButtons(){
     const no = document.querySelector('.no');
 
     yes.addEventListener('click',() => {
-        document.write('<h1 style=color:#d00000;margin:20% 0 0 60%;>Sorry iranian user we should say good bye</h1>')
+        if(innerWidth <= 500){
+            document.write('<p style=color:#d00000;margin:10% 0 0 0;>Sorry user we should say good bye</p>')
+        }else{
+            document.write('<h1 style=color:#d00000;margin:20% 0 0 60%;>Sorry user we should say good bye</h1>')
+        }
         setTimeout(() => {
             close()
         },4000)
