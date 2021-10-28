@@ -742,7 +742,7 @@ body{
       }
       .price .dollar{
         font-size: .7em;
-        right:46%;
+        right:47%;
       }
       .price .allprice{
         font-size: .9em;
@@ -804,3 +804,70 @@ body{
       z-index: 20;
     }
     } 
+    @media screen and (min-width : 475px) and (max-width : 768px){
+      body{
+        justify-content: space-around;
+      }
+      .containermessage{
+        height: 160vw;
+        overflow-y: hidden;
+      }
+      .containermessage .buttonmessage{
+        width: 55%;
+        margin-left: 5px;
+      }
+     .container-ghost{
+        top: 80%;
+        left: 52%;
+      }
+      .container-ghost .ghost{
+        width: 70%;
+      }
+      .container-ghost .shadowFrame{
+        width: 89px;
+      }
+      .background{
+        height:350px;
+      }
+      .price,
+      .pointnumber{
+        margin-top: 50px;
+        border-radius: 25px;
+        width: 22%;
+        height: 21vw;
+      }
+      .price .dollar{
+        right: 47%;
+        font-size: .8em;
+      }
+      .crypto{
+        width: 8%;
+        height: 8%;
+        margin-top: 50px;
+      }
+      .crypto .tron{
+        margin-top: 20px;
+      }
+      .tron:hover ,
+      .dogcoin:hover,
+      .bitcoin:hover,
+      .eterium:hover{
+        transform: translateY(5px);
+      }
+      .shiba:hover{
+        transform: translateY(2px);
+      }
+      .tron .tronname,
+      .bitcoin .bitcoinname,
+      .dogcoin .dogcoinname,
+      .eterium .eteriumname,
+      .shiba .shibaname{
+        font-size: .9em;
+      }
+      .shoppingcart{
+        width: 100%;
+        height: 48%;
+        left: 0;
+        top: 0;
+      }
+    }
