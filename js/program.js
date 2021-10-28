@@ -14,25 +14,26 @@ const changeBackground = {
             this.toggle.style.display = 'none' ;
             document.body.style.backgroundColor = '#000495' ;
 
-            let secondToggleStyle = [ 
+            
             this.secondToggle.style.backgroundColor = '#000495' ,
             this.secondToggle.style.display = 'block' 
-            ]
+        
 
-            let priceStyle = [
+            
             this.price.style.background = 'linear-gradient(45deg, #000486, #00049f)' ,
             this.price.style.boxShadow = ' 20px -20px 26px #00036d,-20px 20px 26px #0005bd'
-            ];
+            
            
-            let pointStyle = [
+           
             this.points.style.background = 'linear-gradient(45deg, #000486, #00049f)' ,
             this.points.style.boxShadow = ' 20px -20px 26px #00036d,-20px 20px 26px #0005bd'
-            ]
             
-            let cryptoStyle = [
+            
+                
                 this.crypto.style.background = 'linear-gradient(45deg, #000486, #00049f)' ,
                 this.crypto.style.boxShadow = ' 20px -20px 26px #00036d,-20px 20px 26px #0005bd'
-            ]
+                if(innerWidth <= 500)
+                    this.crypto.style.boxShadow = 'none'
 
         })
     } ,
@@ -42,21 +43,23 @@ const changeBackground = {
         this.secondToggle.style.display = 'none';
         this.toggle.style.display = 'block' ;
         document.body.style.backgroundColor = '#684275'
-
-        let priceDefault = [
-            this.price.style.background = 'linear-gradient(45deg, #5e3b69, #6f477d)' ,
+        
+  
+            this.price.style.background = 'linear-gradient(45deg, #5e3b69, #6f477d)' 
             this.price.style.boxShadow = ' 22px -22px 44px #462c4e,-22px 22px 44px #8a589c'
-        ] ;
+  
 
-        let pointDefault = [
-            this.points.style.background = 'linear-gradient(45deg, #5e3b69, #6f477d)',
+  
+            this.points.style.background = 'linear-gradient(45deg, #5e3b69, #6f477d)'
             this.points.style.boxShadow = ' 22px -22px 44px #462c4e,-22px 22px 44px #8a589c'
-        ] ;
+        
 
-        let cryptoDefault = [
-            this.crypto.style.background = 'linear-gradient(45deg, #5e3b69, #6f477d)',
+            
+            this.crypto.style.background = 'linear-gradient(45deg, #5e3b69, #6f477d)'
             this.crypto.style.boxShadow = ' 22px -22px 44px #462c4e,-22px 22px 44px #8a589c'
-        ]
+            if(innerWidth <= 500)
+                this.crypto.style.boxShadow = 'none'
+
 
     })
     }
@@ -83,12 +86,14 @@ const showCurrency = {
             
             this.cryptoElement.style.width = '13%' ;
             this.cryptoElement.style.height = '29vw' ;
-            if(innerWidth <= 474) {
-                this.cryptoElement.style.width = '62%' ;
-                this.cryptoElement.style.height = '58vw' ;
-            }else if(innerWidth >= 475 && innerWidth <= 768){
-                this.cryptoElement.style.width = '38%' ;
-                this.cryptoElement.style.height = '51vw' ;
+            if(innerWidth <= 500){
+                this.cryptoElement.style.width = '100%';
+                this.cryptoElement.style.height = '100vh';
+                this.cryptoElement.style.top = '0';
+                this.cryptoElement.style.right = '0';
+                this.cryptoElement.style.borderRadius = '0'
+                this.cryptoElement.removeAttribute('class')
+                this.cryptoElement.setAttribute('class','crypto')
             }
             setTimeout(() => {
                 this.tron.style.display = 'flex' ;
@@ -104,24 +109,26 @@ const showCurrency = {
     closeMenu(){
         this.iconPulse.addEventListener('click',() => {
             this.iconPulse.style.display = 'none' ;
-
+           
             this.iconPlus.style.top = 'none' ;
             this.iconPlus.style.display = 'block' ;
-
+           
             this.cryptoElement.style.width = '4%' ;
             this.cryptoElement.style.height = '4vw' ;
-            if(innerWidth <= 474) {
-                this.cryptoElement.style.width = '14%' ;
-                this.cryptoElement.style.height = '14vw' ;
-            }else if(innerWidth >= 475 && innerWidth <= 768){
-                this.cryptoElement.style.width = '8%' ;
-                this.cryptoElement.style.height = '8vw' ;
+            if(innerWidth <= 500){
+                this.cryptoElement.style.width = '30px';
+                this.cryptoElement.style.height = '30px';
+                this.cryptoElement.style.right = '20px';
+                this.cryptoElement.style.top = '17px';
+                this.cryptoElement.style.borderRadius = '50%';
+               this.cryptoElement.setAttribute('class','crypto animated infinite pulse')
             }
             this.tron.style.display = 'none' ;
             this.cryptoElement.children[3].style.display = 'none' ;
             this.cryptoElement.children[4].style.display = 'none' ;
             this.cryptoElement.children[5].style.display = 'none' ;
             this.cryptoElement.children[6].style.display = 'none' ;
+            
         })
     }
 

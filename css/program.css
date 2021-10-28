@@ -78,8 +78,12 @@ body{
     width:100%;
 }
 .pointnumber .bot .childbot{
-    font-size:1.5em;
+    font-size: 1.5em;
     cursor: pointer;
+    width: 25px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
 }
 /* crypto currency ::::::::::::::::::::::::::: */
 .crypto{
@@ -701,173 +705,58 @@ body{
       }
     }
     /* responsive section :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: ::*/
-    @media  screen and (max-width : 474px) {
-      .background {
-        height:210px;
-      }
-      .containermessage{
-        height: 106vh;
-      }
-      .containermessage .textmessage{
-        text-align: center;
-        margin-bottom: 20px;
-      }
-      .containermessage .buttonmessage{
-        width: 75%;
-        margin-left: 5%;
-      }
-      .container-ghost{
-        top: 118%;
-        margin-left: -36.6px;
-      }
-      .container-ghost .ghost{
-        width: 60%;
-      }
-      .shadowFrame{
-        width: 73px;
-      }
-      .toggle{
-        width: 20px;
-        height: 20px;
-      }
-      .secondtoggle{
-        width: 20px;
-        height: 20px;
+    @media screen and (max-width : 500px){
+      .background{
+        height: 250px;
       }
       .price{
-        width: 30%;
-        height: 30vw;
+        margin-top: 130px;
+        width: 33%;
+        height: 33vw;
         border-radius: 25px;
-        margin-top: 8%;
+      }
+      .pointnumber{
+        margin-top: 130px;
+        width: 33%;
+        height: 33vw;
+        border-radius: 25px;
+      }
+      .pointnumber .bot .childbot{
+        font-size: 1.3em;
+        cursor: pointer;
+        width: 22px;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+      }
+      .crypto{
+        position: absolute;
+        right: 20px;
+        top:17px;
+        width: 30px;
+        height: 30px;
+        z-index:1;
+        box-shadow: none;
       }
       .price .dollar{
-        font-size: .7em;
         right:47%;
       }
-      .price .allprice{
-        font-size: .9em;
-      }
-      .price .textprice{
-        font-size: .9em;
-      }
-      .pointnumber{
-        width: 30%;
-        height: 30vw;
-        border-radius: 25px;
-        margin-top: 8%;
-      }
-      .pointnumber .show{
-        font-size: 1em;
-      }
-
-      .crypto{
-        top:119%;
-        position: absolute;
-        width: 15%;
-        height: 14vw;
-      }
-      .crypto .tron{
-        margin-top: 23px;
-      }
-      .tron:hover ,
-      .dogcoin:hover,
-      .bitcoin:hover,
-      .eterium:hover{
-        transform: translateY(5px);
-      }
-      .shiba:hover{
-        transform: translateY(2px);
-      }
-      .tron .tronname,
-      .dogcoin .dogcoinname,
-      .bitcoin .bitcoinname,
-      .eterium .eteriumname,
-      .shiba .shibaname{
-        font-size: .9em;
-      }
-    .cart{
-      left: 4%;
-      padding: 7px;
-    }
-    .shoppingcart{
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      z-index: 1;
-    }
-    .alertlink{
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      z-index: 20;
-    }
-    } 
-    @media screen and (min-width : 475px) and (max-width : 768px){
-      body{
-        justify-content: space-around;
-      }
-      .containermessage{
-        height: 160vw;
-        overflow-y: hidden;
-      }
-      .containermessage .buttonmessage{
-        width: 55%;
-        margin-left: 5px;
-      }
-     .container-ghost{
-        top: 80%;
-        left: 52%;
-      }
-      .container-ghost .ghost{
-        width: 70%;
-      }
-      .container-ghost .shadowFrame{
-        width: 89px;
-      }
-      .background{
-        height:350px;
-      }
-      .price,
-      .pointnumber{
-        margin-top: 50px;
-        border-radius: 25px;
-        width: 22%;
-        height: 21vw;
-      }
-      .price .dollar{
-        right: 47%;
-        font-size: .8em;
-      }
-      .crypto{
-        width: 8%;
-        height: 8%;
-        margin-top: 50px;
-      }
-      .crypto .tron{
-        margin-top: 20px;
-      }
-      .tron:hover ,
-      .dogcoin:hover,
-      .bitcoin:hover,
-      .eterium:hover{
-        transform: translateY(5px);
-      }
-      .shiba:hover{
-        transform: translateY(2px);
-      }
-      .tron .tronname,
-      .bitcoin .bitcoinname,
-      .dogcoin .dogcoinname,
-      .eterium .eteriumname,
-      .shiba .shibaname{
-        font-size: .9em;
-      }
       .shoppingcart{
-        width: 100%;
-        height: 48%;
-        left: 0;
         top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+      }
+      .alertlink{
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 3;
+      }
+      .cart{
+        padding: 6px;
+        left: 2%;
       }
     }
