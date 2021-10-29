@@ -706,6 +706,24 @@ body{
     }
     /* responsive section :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: ::*/
     @media screen and (max-width : 500px){
+      .containermessage{
+        height: 100vh;
+      }
+      .containermessage .textmessage{
+        text-align: center;
+      }
+      .containermessage .buttonmessage{
+        width: 75%;
+        margin-left: 10px;
+      }
+      .container-ghost{
+        margin-left: -54px;
+        margin-top: 250px;
+      }
+      .container-ghost .ghost,
+      .container-ghost .shadowFrame{
+        width: 80%;
+      }
       .background{
         height: 250px;
       }
@@ -759,4 +777,7 @@ body{
         padding: 6px;
         left: 2%;
       }
+    }
+    @media screen and (min-width : 501px) and (max-width : 800px){
+      
     }
