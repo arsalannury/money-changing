@@ -775,9 +775,36 @@ body{
       }
       .cart{
         padding: 6px;
-        left: 2%;
+        left: 3%;
       }
     }
     @media screen and (min-width : 501px) and (max-width : 800px){
-      
+      .background{
+        height: 300px;
+      }
+      .toggle,
+      .secondtoggle{
+        width: 30px;
+        height: 30px;
+      }
+      .price{
+        position: absolute;
+        top: 600px;
+        left: 30px;
+        width: 31%;
+        height: 31vw;
+        border-radius: 25px;
+      }
+      .pointnumber{
+        position: absolute;
+        top: 600px;
+        right: 30px;
+        width: 31%;
+        height: 31vw;
+        border-radius: 25px;
+      }
+      .crypto{
+        width: 9%;
+        height: 9vw;
+      }
     }

@@ -94,6 +94,12 @@ const showCurrency = {
                 this.cryptoElement.style.borderRadius = '0'
                 this.cryptoElement.removeAttribute('class')
                 this.cryptoElement.setAttribute('class','crypto')
+            }else if(innerWidth >= 501 && innerWidth <= 800){
+                this.cryptoElement.style.position = 'absolute';
+                this.cryptoElement.style.top = '0';
+                this.cryptoElement.style.width = '100%';
+                this.cryptoElement.style.height = '50vh';
+                this.cryptoElement.style.borderRadius = '0';
             }
             setTimeout(() => {
                 this.tron.style.display = 'flex' ;
@@ -122,6 +128,12 @@ const showCurrency = {
                 this.cryptoElement.style.top = '17px';
                 this.cryptoElement.style.borderRadius = '50%';
                this.cryptoElement.setAttribute('class','crypto animated infinite pulse')
+            }else if(innerWidth >= 501 && innerWidth <= 800){
+                this.cryptoElement.style.position = 'unset';
+                this.cryptoElement.style.top = 'none';
+                this.cryptoElement.style.width = '9%';
+                this.cryptoElement.style.height = '9vw';
+                this.cryptoElement.style.borderRadius = '50%';
             }
             this.tron.style.display = 'none' ;
             this.cryptoElement.children[3].style.display = 'none' ;
