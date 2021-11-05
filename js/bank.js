@@ -23,6 +23,11 @@ const buttonsform = document.querySelector('.submitbuttons');
 const alertBank = document.querySelector('.alertbank');
 const alertButton = document.querySelector('.alertbutton');
 
+const contSetNameInput = document.querySelector('.cont_setname_input');
+const buttonAddName = document.querySelector('.add_name');
+const inputAddName = document.getElementById('set__name');
+const errorFullName = document.querySelector('.error_full_name');
+const nameUserSection = document.querySelector('.name');
 // :::::::::::::::
 // change color bank name
 // :::::::::::::::
@@ -172,4 +177,38 @@ otherPayment.addEventListener('click',(e) => {
     if(e.target.className === 'fab fa-cc-amazon-pay amazon'){
         location.href = 'https://www.pay.amazon.com'
     }
+})
+
+
+
+ function showModalForSetUserName(){
+ banksInformation.style.display = 'none';
+ document.querySelector('.payment').style.display = 'none';
+ setTimeout(() => { contSetNameInput.style.display = 'flex'},50);
+}
+function hideModalForSetUserName(){
+    if(inputAddName.value.length <= 2){
+        errorFullName.style.display = 'unset';
+        setTimeout(() => {errorFullName.style.display = 'none'},3000)
+        return;
+    };
+   
+    banksInformation.style.display = 'unset';
+    document.querySelector('.payment').style.display = 'flex';
+    contSetNameInput.style.display = 'none';
+}
+
+function resultEnterName(){
+    let setInfLocal = localStorage.setItem('name',JSON.stringify(inputAddName.value));
+    let getInfLocal = JSON.parse(localStorage.getItem('name'));
+    nameUserSection.innerText = getInfLocal;
+ }   
+
+window.addEventListener('DOMContentLoaded',(e) => {
+   showModalForSetUserName();
+})
+
+buttonAddName.addEventListener('click',(e) => {
+  hideModalForSetUserName();
+  resultEnterName();
 })

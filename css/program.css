@@ -782,6 +782,20 @@ body{
       .background{
         height: 300px;
       }
+      .containermessage{
+        height: 100vh;
+      }
+      .container-ghost{
+        margin-left: -50px;
+        top: 100%;
+      }
+      .container-ghost .ghost,
+      .container-ghost .shadowFrame{
+        width: 70%;
+      }
+      .containermessage .buttonmessage{
+        width: 50%;
+      }
       .toggle,
       .secondtoggle{
         width: 30px;
@@ -806,5 +820,72 @@ body{
       .crypto{
         width: 9%;
         height: 9vw;
+      }
+      .shoppingcart{
+        width: 60%;
+        left: auto;
+      }
+      .shoppingcart .buybutton{
+        font-size: .9em;
+      }
+      .shoppingcart .closeiconcart{
+        font-size: 1.1em;
+      }
+      .alertlink{
+       width: 60%;
+       left: auto;
+       height: 30%;
+       top: 35%;
+      }
+      .cart{
+        left: 4%;
+      }
+    }
+    @media screen and (min-width : 801px) and (max-width : 1150px){
+      .containermessage{
+        height: 100vh;
+        background-size: 220%;
+      }
+      .containermessage .buttonmessage{
+        width: 30%;
+        margin-left: 8px;
+      }
+      .container-ghost{
+        top: 60%;
+      }
+      .toggle,
+      .secondtoggle{
+        width: 30px;
+        height: 30px;
+      }
+      .price,
+      .pointnumber{
+        width: 18%;
+        height: 17vw;
+        border-radius: 25px;
+        margin-top: 60px;
+      }
+  
+      .crypto{
+        width: 6%;
+        height: 6vw;
+        margin-top: 60px;
+      }
+      .crypto .tron{
+        margin-top: 17px;
+      }
+      .cart{
+        left: 4%;
+      }
+      .shoppingcart{
+        width: 37%;
+        left: auto;
+        height: 25%;
+      }
+      .alertlink{
+        width: 37%;
+        height: 25%;
+        left: auto;
+        top: 35%;
       }
     }
