@@ -8,13 +8,10 @@
     <meta name="description" content=" ">
     <link href="../Hover-master/css/hover-min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/bank.css">
-    <!--sweet alert 2-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.28.4/sweetalert2.min.css" />
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.28.4/sweetalert2.all.min.js" integrity="sha256-qtyU+b249rw/5PQ1KXGRtxjlgg6hfU2EK50YOlc0n50=" crossorigin="anonymous"></script>
-    <!--sweet alert 2-->
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.6/animate.min.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
     <title>Bank</title>
 </head>
 <body>
@@ -87,8 +84,14 @@
      <div class="cont_setname_input">
          <h2>Enter Your Name</h2>
          <button class="add_name hvr-bounce-to-right">submit</button>
-         <input type="text" id = 'set__name' required placeholder="Your Full Name...">
+         <input type="text" id = 'set__name' maxlength="40" required placeholder="Your Full Name...">
          <span class="error_full_name">Enter your Name Correctly</span>
+
+         <div class="check_name_section">
+            <i class="spinner_icon fas fa-spinner fa-spin"></i>
+            <span class="inner_inputname_value"></span>
+         </div>
+        
      </div>
 
      <script src="../js/bank.js"></script>

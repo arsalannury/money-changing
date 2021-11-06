@@ -28,6 +28,10 @@ const buttonAddName = document.querySelector('.add_name');
 const inputAddName = document.getElementById('set__name');
 const errorFullName = document.querySelector('.error_full_name');
 const nameUserSection = document.querySelector('.name');
+const innerInputNameValue = document.querySelector('.inner_inputname_value');
+const checkNameContainer = document.querySelector('.check_name_section');
+const errorTypeName = document.querySelector('.error_type_name');
+const loadCheckNameIcon = document.querySelector('.spinner_icon');
 // :::::::::::::::
 // change color bank name
 // :::::::::::::::
@@ -179,31 +183,63 @@ otherPayment.addEventListener('click',(e) => {
     }
 })
 
-
+// ::::::::::::::::::::
+// set function for add name section after load window
+// ::::::::::::::::::::
 
  function showModalForSetUserName(){
  banksInformation.style.display = 'none';
  document.querySelector('.payment').style.display = 'none';
  setTimeout(() => { contSetNameInput.style.display = 'flex'},50);
 }
+
 function hideModalForSetUserName(){
+    if(loadCheckNameIcon.className === 'spinner_icon fas fa-spinner fa-spin') return
     if(inputAddName.value.length <= 2){
         errorFullName.style.display = 'unset';
+        inputAddName.value = null;
         setTimeout(() => {errorFullName.style.display = 'none'},3000)
         return;
     };
-   
     banksInformation.style.display = 'unset';
     document.querySelector('.payment').style.display = 'flex';
     contSetNameInput.style.display = 'none';
 }
 
 function resultEnterName(){
+    if(loadCheckNameIcon.className === 'spinner_icon fas fa-spinner fa-spin') return
     let setInfLocal = localStorage.setItem('name',JSON.stringify(inputAddName.value));
     let getInfLocal = JSON.parse(localStorage.getItem('name'));
+    if(inputAddName.value.length <= 2) return ;
     nameUserSection.innerText = getInfLocal;
+    inputAddName.value = null;
  }   
+ 
+function checkName(){
+   
+    if(inputAddName.value.length > 2){
+        innerInputNameValue.innerText = inputAddName.value;
+        checkNameContainer.style.display = 'unset';
+    }else{
+        innerInputNameValue.innerText = null;
+        checkNameContainer.style.display = 'none';
+    }
+    
+}
 
+function keyDownCheckName(){
+    loadCheckNameIcon.setAttribute('class','spinner_icon fas fa-spinner fa-spin')      
+}
+
+function keyUpCheckName(){
+    if(inputAddName.value){
+      setTimeout(() => {loadCheckNameIcon.setAttribute('class','spinner_icon bi bi-check')},3000)
+    }
+}
+
+// ::::::::::::::::::::
+// listener for add name section
+// ::::::::::::::::::::
 window.addEventListener('DOMContentLoaded',(e) => {
    showModalForSetUserName();
 })
@@ -212,3 +248,26 @@ buttonAddName.addEventListener('click',(e) => {
   hideModalForSetUserName();
   resultEnterName();
 })
+
+inputAddName.addEventListener('input',(e) => {
+  checkName();
+})
+
+window.addEventListener('keydown',(e) => {
+    keyDownCheckName();
+})
+window.addEventListener('keyup',(e) => {
+    keyUpCheckName()
+})
+
+// ::::::::::::::::::::
+// style box shadow container
+// ::::::::::::::::::::
+
+inputAddName.addEventListener('focus',(e) =>{
+    contSetNameInput.style.boxShadow = '0 0 10px #222';
+})
+inputAddName.addEventListener('blur',(e) =>{
+    contSetNameInput.style.boxShadow = '0 0 70px #bbb';
+})
+
