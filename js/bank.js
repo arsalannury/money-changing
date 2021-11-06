@@ -135,10 +135,10 @@ buttonsform.addEventListener('click',(e) => {
 
         if(safetyCodeUser.value !== safetyCodeCreate.value){
             safetyCodeCreate.value = Math.floor(Math.random() * 309745 );
-            document.querySelector('.alertsafecode').style.display = 'unset';
+            document.querySelector('#alertsafecode').style.display = 'unset';
             return;
         }else{
-            document.querySelector('.alertsafecode').style.display = 'none'; 
+            document.querySelector('#alertsafecode').style.display = 'none'; 
            
         }  
 

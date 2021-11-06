@@ -54,6 +54,44 @@ body{
     left: 20px;
     cursor: pointer;
 }
+.pulse {
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  }
+  @-webkit-keyframes pulse {
+  0% {
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+  }
+  50% {
+  -webkit-transform: scale3d(1.05, 1.05, 1.05);
+  transform: scale3d(1.05, 1.05, 1.05);
+  }
+  100% {
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+  }
+  }
+  @keyframes pulse {
+  0% {
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+  }
+  50% {
+  -webkit-transform: scale3d(1.05, 1.05, 1.05);
+  transform: scale3d(1.05, 1.05, 1.05);
+  }
+  100% {
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+  }
+  } 
 /* point number style :::::::::::::::::::::: */
 .pointnumber{
     width: 16%;
@@ -666,6 +704,46 @@ body{
      color: #fff;
      transition:all .4s ease;
     }
+    .zoomInDown {
+      -webkit-animation-name: zoomInDown;
+      animation-name: zoomInDown;
+      -webkit-animation-duration: 1s;
+      animation-duration: 1s;
+      -webkit-animation-fill-mode: both;
+      animation-fill-mode: both;
+      }
+      @-webkit-keyframes zoomInDown {
+      0% {
+      opacity: 0;
+      -webkit-transform: scale3d(.1, .1, .1) translate3d(0, -1000px, 0);
+      transform: scale3d(.1, .1, .1) translate3d(0, -1000px, 0);
+      -webkit-animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+      animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+      }
+      60% {
+      opacity: 1;
+      -webkit-transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
+      transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
+      -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+      animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+      }
+      }
+      @keyframes zoomInDown {
+      0% {
+      opacity: 0;
+      -webkit-transform: scale3d(.1, .1, .1) translate3d(0, -1000px, 0);
+      transform: scale3d(.1, .1, .1) translate3d(0, -1000px, 0);
+      -webkit-animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+      animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+      }
+      60% {
+      opacity: 1;
+      -webkit-transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
+      transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
+      -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+      animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+      }
+      } 
      /* loade style :::::::::::::::::::::::::::::::::; */
      .lds-facebook {
       display: none;
