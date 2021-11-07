@@ -967,3 +967,9 @@ body{
         top: 35%;
       }
     }
+
+    .length__link{
+     font-size: .7em;
+     color: #d00000;
+    }
+    
