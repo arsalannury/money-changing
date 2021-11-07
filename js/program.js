@@ -408,6 +408,7 @@ buyButton.addEventListener('click',(e) => {
         stylesForAddWalletBtn();
         setTimeout(() => {
             location.href = '../html/bank.html'
+            document.querySelector('.lds-facebook').style.display = 'none';
         },3000)
         walletLink.value = null;
     }

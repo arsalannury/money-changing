@@ -224,14 +224,16 @@ function checkName(){
         innerInputNameValue.innerText = null;
         checkNameContainer.style.display = 'none';
     }
-    
+
 }
 
 function keyDownCheckName(){
+    
     loadCheckNameIcon.setAttribute('class','spinner_icon fas fa-spinner fa-spin')      
 }
 
 function keyUpCheckName(){
+   
     if(inputAddName.value){
       setTimeout(() => {loadCheckNameIcon.setAttribute('class','spinner_icon bi bi-check')},3000)
     }
@@ -271,3 +273,27 @@ inputAddName.addEventListener('blur',(e) =>{
     contSetNameInput.style.boxShadow = '0 0 70px #bbb';
 })
 
+
+// ::::::::::::::::::::
+// you can not use numbers to  set name box
+// ::::::::::::::::::::
+function errorSweetAlert(){
+    Swal.fire({
+        title: 'Atention...',
+        text: 'You can not use numbers!',
+      })
+}
+let number = ['0','1','2','3','4','5','6','7','8','9'];
+inputAddName.addEventListener('beforeinput',(e) => {
+  
+    number.forEach(num => {
+       
+       if(inputAddName.value.includes(num)){
+           e.preventDefault();
+           errorSweetAlert()
+           inputAddName.value = null;
+       }
+
+    })
+
+})
