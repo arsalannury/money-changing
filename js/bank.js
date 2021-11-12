@@ -141,7 +141,6 @@ buttonsform.addEventListener('click',(e) => {
             document.querySelector('#alertsafecode').style.display = 'none'; 
            
         }  
-
         stylesForSubmitBtn();
         setTimeout(() => {
             location.href = '../html/paypage.html';

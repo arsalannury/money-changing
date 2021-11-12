@@ -373,6 +373,12 @@ const walletAddress = {
      }else{
         document.querySelector('.warning').style.display = 'none' ;
      }
+
+     if(e.target.value.length > 20 && shopName.innerText){
+         buyButton.style.display = 'unset'
+     }else{
+        buyButton.style.display = 'none'
+     }
     })
        
     }  
@@ -398,21 +404,17 @@ const walletLink = document.querySelector('.walletlink');
 const alertLink = document.querySelector('.alertlink');
 const alertButton = document.querySelector('.alertbutton');
 const shopName = document.querySelector('.shopname');
+const shoppingCart = document.querySelector('.shoppingcart') ;
 
 buyButton.addEventListener('click',(e) => {
-    if(shopName.innerText === '') return;
-       
-    if(walletLink.value.length <= 20){
-     alertLink.style.display = 'flex';
-    }else{
-        stylesForAddWalletBtn();
-        setTimeout(() => {
-            location.href = '../html/bank.html'
-            document.querySelector('.lds-facebook').style.display = 'none';
-        },3000)
-        walletLink.value = null;
-    }
-     
+    pushToOrderList();
+    if(walletLink.value.length <= 20) return;
+    stylesForAddWalletBtn();
+    setTimeout(() => {
+    location.href = '../html/bank.html';
+    document.querySelector('.lds-facebook').style.display = 'none';
+    },3000)
+    walletLink.value = null;
 })
 
 alertButton.addEventListener('click',(e) => {
@@ -420,5 +422,6 @@ alertButton.addEventListener('click',(e) => {
 })
 
 window.addEventListener('load',(e) => {
-    walletLink.value = null;
+    if(localStorage.key('ordersInf') === null) return;
+    orders = JSON.parse(localStorage.getItem('ordersInf'))
 })
