@@ -1,6 +1,6 @@
 const ordersList = document.querySelector('.container__orders');
 const getOrderLocal = JSON.parse(localStorage.getItem('ordersInf'));
-
+const confirmLocal = localStorage.getItem('order-result');
 const innerList = () => {
     getOrderLocal.forEach(element => {
         ordersList.innerHTML += 
@@ -9,7 +9,7 @@ const innerList = () => {
 }
 
 window.onload = function () {
-    if(getOrderLocal){
+    if(getOrderLocal && confirmLocal){
         innerList()
     }
 }

@@ -143,6 +143,7 @@ buttonsform.addEventListener('click',(e) => {
         }  
         stylesForSubmitBtn();
         setTimeout(() => {
+            localStorage.setItem('order-result','confirm')
             location.href = '../html/paypage.html';
         },4000)
        
