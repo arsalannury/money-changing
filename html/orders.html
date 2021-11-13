@@ -8,12 +8,24 @@
     <meta name="description" content=" ">
     <title>Orders</title>
     <link href="../Hover-master/css/hover-min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../css/orders.css">
 </head>
 <body>
-    <ul class="container__orders">
-       <h1>Your Orders In Site</h1>
-    </ul>
+    <h1>Orders</h1>
+    <ul class="container__orders fadeInLeft"></ul>
+    <i class="bi bi-x-lg fadeInLeft clear_icon"></i>
+    <i class="bi bi-house fadeInLeft home_icon"></i>
+    <div class="swal_cont">
+    <div class="swal fadeInLeft  ">
+        <h2>Atention!!!</h2>
+        <span class="text-swal">Do You Want Delete all History Orders ?!</span>
+        <div class="buttons">
+            <button class="delete">Delete</button>
+            <button class="cansel">Cansel</button>
+        </div>
+    </div>
+</div>
     <script src="../js/global.js"></script>
     <script src="../js/orders.js"></script>
 </body>
