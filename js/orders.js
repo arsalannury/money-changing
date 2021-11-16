@@ -12,16 +12,21 @@ const homeIcon = document.querySelector('.home_icon');
 // set local storege in LI
 // :::::::::::::::::::::::
 
-const innerList = () => {
-    getOrderLocal.forEach(element => {
+const innerList = () => {  
+    getOrderLocal.forEach((element,i) => {
         ordersList.innerHTML += 
-        `<li class="order_item">${element.name} <span class="price_order">${element.price} $</span><i class="bi bi-check-circle-fill"></i> </li>`
+        `<li class="order_item"> <span>${i+1}</span> ${element.name} <span class="price_order">${element.price} $</span><i class="bi bi-check-circle-fill"></i> </li>`
     })
 }
 
 window.onload = function () {
-    if(getOrderLocal && confirmLocal){
+    if(getOrderLocal){
         innerList()
+    }
+    if(confirmLocal){
+        ordersList.lastElementChild.style.display = 'flex'
+    }else{
+        ordersList.lastElementChild.style.display = 'none'
     }
 }
 
@@ -53,3 +58,5 @@ canselBtn.addEventListener('click',(e) => {
 homeIcon.addEventListener('click' ,(e) => {
     setTimeout(() => {location.href = './index.html'},1000)
 })
+
+

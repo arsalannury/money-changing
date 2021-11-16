@@ -39,6 +39,7 @@ h1::first-letter{
     justify-content: space-around;
     cursor: pointer;
 }
+
 .fadeInLeft {
     -webkit-animation-name: fadeInLeft;
     animation-name: fadeInLeft;

@@ -723,7 +723,7 @@ body{
         opacity: 70%;
         color: #d00000;
         position: absolute;
-        top: 44%;
+        top: 32%;
     }
     .lengthlink{
       position: absolute;
@@ -760,6 +760,16 @@ body{
     .alertlink .h2{
       letter-spacing: 1px;
       border-bottom: 1px solid #d00000
+    }
+    .info{
+      position: absolute;
+      top: 88%;
+      right: 5%;
+      cursor: pointer;
+      transition: all .4s ease;
+    }
+    .info:hover{
+     color: #fcbf49;
     }
     .alertlink .alertbutton{
       border: none;
@@ -811,7 +821,7 @@ body{
       animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
       }
       } 
-     /* loade style :::::::::::::::::::::::::::::::::; */
+     /* loader style :::::::::::::::::::::::::::::::::; */
      .lds-facebook {
       display: none;
       position: absolute;
@@ -926,6 +936,9 @@ body{
         padding: 6px;
         left: 3%;
       }
+      .info{
+        top: 90%;
+      }
     }
     @media screen and (min-width : 501px) and (max-width : 800px){
       .background{
@@ -989,6 +1002,9 @@ body{
       .cart{
         left: 4%;
       }
+      .info{
+        top: 90%;
+      }
     }
     @media screen and (min-width : 801px) and (max-width : 1150px){
       .containermessage{
@@ -1036,6 +1052,9 @@ body{
         height: 25%;
         left: auto;
         top: 35%;
+      }
+      .info{
+        top: 90%;
       }
     }
 

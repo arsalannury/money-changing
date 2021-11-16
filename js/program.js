@@ -405,7 +405,7 @@ const alertLink = document.querySelector('.alertlink');
 const alertButton = document.querySelector('.alertbutton');
 const shopName = document.querySelector('.shopname');
 const shoppingCart = document.querySelector('.shoppingcart') ;
-
+const info = document.querySelector('.info');
 buyButton.addEventListener('click',(e) => {
     pushToOrderList();
     if(walletLink.value.length <= 20) return;
@@ -413,6 +413,7 @@ buyButton.addEventListener('click',(e) => {
     setTimeout(() => {
     location.href = '../html/bank.html';
     document.querySelector('.lds-facebook').style.display = 'none';
+    localStorage.removeItem('order-result');
     },3000)
     walletLink.value = null;
 })
@@ -422,6 +423,11 @@ alertButton.addEventListener('click',(e) => {
 })
 
 window.addEventListener('load',(e) => {
+    walletLink.value = null;
     if(localStorage.key('ordersInf') === null) return;
     orders = JSON.parse(localStorage.getItem('ordersInf'))
+})
+
+info.addEventListener('click',() => {
+    alertLink.style.display = 'flex'
 })
