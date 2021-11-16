@@ -413,8 +413,8 @@ buyButton.addEventListener('click',(e) => {
     setTimeout(() => {
     location.href = '../html/bank.html';
     document.querySelector('.lds-facebook').style.display = 'none';
-    localStorage.removeItem('order-result');
     },3000)
+    localStorage.removeItem('order-result');
     walletLink.value = null;
 })
 

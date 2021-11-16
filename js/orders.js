@@ -26,7 +26,7 @@ window.onload = function () {
     if(confirmLocal){
         ordersList.lastElementChild.style.display = 'flex'
     }else{
-        ordersList.lastElementChild.style.display = 'none'
+        if(ordersList.lastElementChild) ordersList.lastElementChild.style.display = 'none';
     }
 }
 
@@ -45,7 +45,7 @@ function swalDelete(){
 }
 
 deleteBtn.addEventListener('click',(e) => {
-    localStorage.clear();
+    localStorage.removeItem('ordersInf')
     location.reload();
     swal.style.display = 'none';
     swalCont.style.display = 'none';

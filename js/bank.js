@@ -162,7 +162,8 @@ buttonsform.addEventListener('click',(e) => {
 
 function stylesForSubmitBtn(){
     document.querySelector('.lds-facebook').style.display = 'inline-block';
-   document.querySelector('.payment').style.display = 'none';
+    document.querySelector('.payment').style.display = 'none';
+    document.querySelector('.name__user').style.display = 'none';
     banksInformation.style.display = 'none';
 }
 
@@ -242,8 +243,10 @@ function keyUpCheckName(){
 // ::::::::::::::::::::
 // listener for add name section
 // ::::::::::::::::::::
+let minutes = 100;
 window.addEventListener('DOMContentLoaded',(e) => {
    showModalForSetUserName();
+   setInterval(() => {minutes--; minutes === 0 ? location.replace('./index.html') : null},1000)
 })
 
 buttonAddName.addEventListener('click',(e) => {
