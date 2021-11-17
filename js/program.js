@@ -397,6 +397,7 @@ function stylesForAddWalletBtn(){
     document.querySelector('.pointnumber').style.display = 'none';
     document.querySelector('.crypto').style.display = 'none';
     document.querySelector('.shoppingcart').style.display = 'none';
+    if(cart) cart.style.display = 'none';
 }
 
 const buyButton = document.querySelector('.buybutton');
@@ -406,6 +407,9 @@ const alertButton = document.querySelector('.alertbutton');
 const shopName = document.querySelector('.shopname');
 const shoppingCart = document.querySelector('.shoppingcart') ;
 const info = document.querySelector('.info');
+const orderPage = document.querySelector('.order_page');
+const cryptoSec = document.querySelector('.crypto');
+
 buyButton.addEventListener('click',(e) => {
     pushToOrderList();
     if(walletLink.value.length <= 20) return;
@@ -424,10 +428,15 @@ alertButton.addEventListener('click',(e) => {
 
 window.addEventListener('load',(e) => {
     walletLink.value = null;
-    if(localStorage.key('ordersInf') === null) return;
+    if(localStorage.getItem('ordersInf') === null) return;
     orders = JSON.parse(localStorage.getItem('ordersInf'))
 })
 
 info.addEventListener('click',() => {
     alertLink.style.display = 'flex'
+})
+
+orderPage.addEventListener('click',() => {
+    stylesForAddWalletBtn()
+    setTimeout(() => {location.href = './orders.html'},3000)
 })

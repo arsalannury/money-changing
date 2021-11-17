@@ -5,6 +5,7 @@
     padding:0;
     max-width:1280px;
     font-size:16px;
+    user-select: none;
 }
 
 @font-face {
@@ -23,6 +24,16 @@ body{
     position: relative;
     
 }
+
+.order_page{
+ position: absolute;
+ top: 30px;
+ right: 4%;  
+ color: #fff;
+ cursor: pointer;
+}
+
+
 .background{
     background-image: url(../images/44c88d839081875e137dc0f8d3c461be.webp);
     background-size:100% 100% ;
@@ -938,6 +949,18 @@ body{
       }
       .info{
         top: 90%;
+      }
+      .order_page{
+      top: 225px;
+      bottom: unset;
+      right: auto;
+      left: auto;
+      font-size: .8em;
+      animation: color 3s ease infinite alternate;
+      }
+      @keyframes color {
+        from{color: #fff}
+        to{color: #684275;}
       }
     }
     @media screen and (min-width : 501px) and (max-width : 800px){
