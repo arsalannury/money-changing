@@ -198,6 +198,7 @@ body{
     border: 1px solid #000;
     background-color: #fff;
     border-radius: 3px;
+    transition: all 1s ease;
 }
 .bankicon{
     transition: all .5s ease;
@@ -458,4 +459,73 @@ body{
  .payment input::placeholder{
    color: #555;
    font-size: .9em;
+ }
+.banks_mobile_menu{
+  display: none;
+}
+ /*  responsive media querys */
+
+ @media screen and (max-width : 500px){
+   .cont_setname_input{
+     width: 75%;
+     top: 20%;
+   }
+   .cont_setname_input input{
+     width: 90%;
+   }
+   .cont_setname_input .add_name{
+     width: 40%;
+   }
+   .bnaks{
+     display: none;
+     width: 0;
+     height: 0;
+   }
+
+   .slideInLeft {
+    -webkit-animation-name: slideInLeft;
+    animation-name: slideInLeft;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    }
+    @-webkit-keyframes slideInLeft {
+    0% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    visibility: visible;
+    }
+    100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    }
+    }
+    @keyframes slideInLeft {
+    0% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    visibility: visible;
+    }
+    100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    }
+    } 
+
+   .fbank , .sbank , .tbank{
+     margin:40px 0 30px 0;
+   }
+   .other-payment{
+     margin: 50px auto 0 auto;
+   }
+   
+   .banks_mobile_menu{
+     display: unset;
+     position: absolute;
+     left: 2%;
+     color: #000;
+     top: 2%;
+     font-size: 1.2em;
+   }
  }
