@@ -8,6 +8,7 @@ const tBankName = document.querySelector('.tbankname');
 const fBank = document.querySelector('.fbank');
 const sBank = document.querySelector('.sbank');
 const tBank = document.querySelector('.tbank');
+const readOnlyes = [fBank,sBank,tBank];
 
 const paymentForm = document.querySelectorAll('.payment input');
 const cartNumber = document.querySelector('.cartnumber');
@@ -155,6 +156,7 @@ buttonsform.addEventListener('click',(e) => {
     
    // cansel button :::::::::::::::::::::::::::::::::::::
    if(e.target.className === 'canselsubmit'){
+       e.preventDefault();
     inputsValue.forEach(nodeElement => { 
             nodeElement.value = ''
     })
@@ -168,6 +170,7 @@ function stylesForSubmitBtn(){
     document.querySelector('.lds-facebook').style.display = 'inline-block';
     document.querySelector('.payment').style.display = 'none';
     document.querySelector('.name__user').style.display = 'none';
+    banksMobileMenu.style.display = 'none';
     banksInformation.style.display = 'none';
 }
 
@@ -336,6 +339,7 @@ function appnedTimesBnaks(){
 let namesBank = [fBank,sBank,tBank,otherPayment]
 // show menu : : : : : : : : : : : : : : : : : : : 
 banksMobileMenu.addEventListener('click',(e) => {
+    if(alertBank.style.display === 'flex') return;
     namesBank.forEach(styles => {
         styles.style.display = 'flex'
     })

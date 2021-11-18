@@ -7,7 +7,7 @@
     user-select: none;
 }
 body{
-    height: 53.5vw;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -470,8 +470,8 @@ body{
    
    .cont_setname_input{
      width: 75%;
-     top: 20%;
-     height: 50%;
+     top: 25%;
+     height: 55%;
    }
    .cont_setname_input input{
      width: 90%;
@@ -528,7 +528,37 @@ body{
      position: absolute;
      left: 4%;
      color: #000;
-     top: 4%;
+     top: 3%;
      font-size: 1.2em;
+   }
+   .name__user{
+     height: 30px;
+   }
+   .name__user .name{
+     font-size: .8em;
+   }
+   .payment{
+    width: 95%;
+    height: 80vh;
+    margin-top: 39px;
+   }
+   .payment input{
+     height: 8vw;
+   }
+   .payment label{
+     font-size: .8em;
+   }
+   .payment .passwordcreate{
+     font-size: .8em;
+   }
+   .alertbank{
+     width: 100%;
+     height: 100vh;
+   }
+   .alertbank .h2{
+     font-size: .9em
+   }
+   .safecode #alertsafecode{
+     font-size: .7em;
    }
  }
