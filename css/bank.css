@@ -200,6 +200,9 @@ body{
     border-radius: 3px;
     transition: all 1s ease;
 }
+ #banks_mobile_menu{
+  display: none;
+}
 .bankicon{
     transition: all .5s ease;
 }
@@ -460,15 +463,15 @@ body{
    color: #555;
    font-size: .9em;
  }
-.banks_mobile_menu{
-  display: none;
-}
+
  /*  responsive media querys */
 
  @media screen and (max-width : 500px){
+   
    .cont_setname_input{
      width: 75%;
      top: 20%;
+     height: 50%;
    }
    .cont_setname_input input{
      width: 90%;
@@ -520,12 +523,12 @@ body{
      margin: 50px auto 0 auto;
    }
    
-   .banks_mobile_menu{
+   #banks_mobile_menu{
      display: unset;
      position: absolute;
-     left: 2%;
+     left: 4%;
      color: #000;
-     top: 2%;
+     top: 4%;
      font-size: 1.2em;
    }
  }

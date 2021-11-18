@@ -35,7 +35,7 @@ const checkNameContainer = document.querySelector('.check_name_section');
 const errorTypeName = document.querySelector('.error_type_name');
 const loadCheckNameIcon = document.querySelector('.spinner_icon');
 
-const banksMobileMenu = document.querySelector('.banks_mobile_menu')
+const banksMobileMenu = document.querySelector('#banks_mobile_menu')
 // :::::::::::::::
 // change color bank name
 // :::::::::::::::
@@ -213,7 +213,7 @@ function hideModalForSetUserName(){
         banksInformation.style.display = 'unset';
     }
     document.querySelector('.payment').style.display = 'flex';
-    banksMobileMenu.style.display = 'unset'
+    innerWidth <= 500 ? banksMobileMenu.style.display = 'unset' : banksMobileMenu.style.display = 'none'
     contSetNameInput.style.display = 'none';
 }
 
@@ -260,7 +260,7 @@ function keyUpCheckName(){
 let minutes = 100;
 window.addEventListener('DOMContentLoaded',(e) => {
    showModalForSetUserName();
-//    setInterval(() => {minutes--; minutes === 0 ? location.replace('./index.html') : null},1000)
+   setInterval(() => {minutes--; minutes === 0 ? location.replace('./index.html') : null},1000)
 })
 
 buttonAddName.addEventListener('click',(e) => {
@@ -318,6 +318,7 @@ inputAddName.addEventListener('beforeinput',(e) => {
 // menu mobile banks infomration ::::::::::::::::::
 
 const iconTimes = document.createElement('i');
+innerWidth > 500 ? banksMobileMenu.style.display = 'none' : banksMobileMenu.style.display = 'unset';
 // ::::::::::::::
 // icon times for show banks information menu 
 // ::::::::::::::
