@@ -39,13 +39,14 @@ clear_icon.addEventListener('click',(e) => {
   })
 
 function swalDelete(){
-   if(!localStorage.key('ordersInf')) return;
+   if(!localStorage.getItem('ordersInf')) return;
    swal.style.display = 'flex';
    swalCont.style.display = 'flex';
 }
 
 deleteBtn.addEventListener('click',(e) => {
     localStorage.removeItem('ordersInf')
+    localStorage.removeItem('order-result')
     location.reload();
     swal.style.display = 'none';
     swalCont.style.display = 'none';

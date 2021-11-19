@@ -410,6 +410,8 @@ const info = document.querySelector('.info');
 const orderPage = document.querySelector('.order_page');
 const cryptoSec = document.querySelector('.crypto');
 
+//  add to wallet btn : : : : : : :
+
 buyButton.addEventListener('click',(e) => {
     pushToOrderList();
     if(walletLink.value.length <= 20) return;
@@ -420,23 +422,31 @@ buyButton.addEventListener('click',(e) => {
     },3000)
     localStorage.removeItem('order-result');
     walletLink.value = null;
+    orderPage.style.display = 'none'
 })
+
+//  hide help modal : : : : : : :
+//  show help modal : : : : : : : 
 
 alertButton.addEventListener('click',(e) => {
   alertLink.style.display = 'none'
-})
-
-window.addEventListener('load',(e) => {
-    walletLink.value = null;
-    if(localStorage.getItem('ordersInf') === null) return;
-    orders = JSON.parse(localStorage.getItem('ordersInf'))
 })
 
 info.addEventListener('click',() => {
     alertLink.style.display = 'flex'
 })
 
+window.addEventListener('load',(e) => {
+    walletLink.value = null;
+    if(localStorage.getItem('ordersInf') === null) return;
+    orders = JSON.parse(localStorage.getItem('ordersInf'));
+})
+
+// order page item 
+
 orderPage.addEventListener('click',() => {
     stylesForAddWalletBtn()
     setTimeout(() => {location.href = './orders.html'},3000)
 })
+
+
