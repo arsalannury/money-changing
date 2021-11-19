@@ -540,8 +540,8 @@ body{
    }
    .payment{
     width: 88%;
-    height: 90vh;
-    margin-top: 52px;
+    height: 70vh;
+    /* margin-top: 52px; */
     justify-content: space-around;
    }
    .payment input{
