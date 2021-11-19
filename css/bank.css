@@ -528,32 +528,38 @@ body{
      position: absolute;
      left: 4%;
      color: #000;
-     top: 3%;
-     font-size: 1.2em;
+     top: 2%;
+     font-size: 1.4em;
    }
    .name__user{
      height: 30px;
+     top: 10px;
    }
    .name__user .name{
      font-size: .8em;
    }
    .payment{
-    width: 95%;
-    height: 80vh;
-    margin-top: 39px;
+    width: 88%;
+    height: 480px;
+    margin-top: 52px;
+    justify-content: space-around;
    }
    .payment input{
-     height: 8vw;
+     height: 7vw;
    }
    .payment label{
      font-size: .8em;
    }
+   .payment input::placeholder{
+     font-size: .9em;
+}
    .payment .passwordcreate{
      font-size: .8em;
    }
    .alertbank{
      width: 100%;
      height: 100vh;
+     top: 0;
    }
    .alertbank .h2{
      font-size: .9em

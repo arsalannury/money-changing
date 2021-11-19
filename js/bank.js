@@ -62,16 +62,6 @@ banksInformation.addEventListener('click',(e)=> {
  }
 })
 
-// ::::::::::::::::::::
-// error show , please choose a bank 
-// ::::::::::::::::::::
-paymentForm.forEach(nodeElement => {
-    nodeElement.addEventListener('click',(e) => {
-       if(userBank.length === 0){
-          alertBank.style.display = 'flex';
-       }
-    })
-})
 
 alertButton.addEventListener('click',(e) => {
     alertBank.style.display = 'none'
@@ -93,7 +83,6 @@ passwordCreate.addEventListener('click',(e) => {
     e.preventDefault();
 
     if(userBank.length === 0){
-        alertBank.style.display = 'flex';
         return
      }
 
@@ -112,7 +101,6 @@ safetyCodeCreate.value = '';
 
 safeCodeSync.addEventListener('click',(e) => {
     if(userBank.length === 0){
-        alertBank.style.display = 'flex';
         return
      }
     safetyCodeCreate.value = Math.floor(Math.random() * 309745 )
@@ -218,6 +206,7 @@ function hideModalForSetUserName(){
     document.querySelector('.payment').style.display = 'flex';
     innerWidth <= 500 ? banksMobileMenu.style.display = 'unset' : banksMobileMenu.style.display = 'none'
     contSetNameInput.style.display = 'none';
+    setTimeout(() => { alertBank.style.display = 'flex';},1000)
 }
 
 function resultEnterName(){
@@ -247,7 +236,9 @@ function checkName(){
 
 function keyDownCheckName(){
     
-    loadCheckNameIcon.setAttribute('class','spinner_icon fas fa-spinner fa-spin')      
+    loadCheckNameIcon.setAttribute('class','spinner_icon fas fa-spinner fa-spin')  
+    if(loadCheckNameIcon.style.display === 'none')
+        loadCheckNameIcon.style.display = 'unset'    
 }
 
 function keyUpCheckName(){
@@ -263,7 +254,7 @@ function keyUpCheckName(){
 let minutes = 100;
 window.addEventListener('DOMContentLoaded',(e) => {
    showModalForSetUserName();
-   setInterval(() => {minutes--; minutes === 0 ? location.replace('./index.html') : null},1000)
+//    setInterval(() => {minutes--; minutes === 0 ? location.replace('./index.html') : null},1000)
 })
 
 buttonAddName.addEventListener('click',(e) => {
@@ -312,13 +303,17 @@ inputAddName.addEventListener('beforeinput',(e) => {
            e.preventDefault();
            errorSweetAlert()
            inputAddName.value = null;
+           innerInputNameValue.innerText = null;
+           loadCheckNameIcon.style.display = 'none';
        }
 
     })
 
 })
 
-// menu mobile banks infomration ::::::::::::::::::
+// ::::::::::::::
+// menu mobile banks infomration 
+// ::::::::::::::
 
 const iconTimes = document.createElement('i');
 innerWidth > 500 ? banksMobileMenu.style.display = 'none' : banksMobileMenu.style.display = 'unset';
@@ -346,9 +341,10 @@ banksMobileMenu.addEventListener('click',(e) => {
     banksInformation.style.display = 'unset'
     banksInformation.style.left = '0'
     banksInformation.style.top = '0'
-    banksInformation.style.width = '80%'
+    banksInformation.style.width = '100%'
     banksInformation.style.height = '100vh'
     banksInformation.style.zIndex = '1'
+    banksInformation.style.border = 'none'
     banksInformation.classList.add('slideInLeft')
     appnedTimesBnaks();
     
