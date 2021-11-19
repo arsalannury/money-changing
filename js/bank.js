@@ -8,7 +8,6 @@ const tBankName = document.querySelector('.tbankname');
 const fBank = document.querySelector('.fbank');
 const sBank = document.querySelector('.sbank');
 const tBank = document.querySelector('.tbank');
-const readOnlyes = [fBank,sBank,tBank];
 
 const paymentForm = document.querySelectorAll('.payment input');
 const cartNumber = document.querySelector('.cartnumber');
