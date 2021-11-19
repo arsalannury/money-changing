@@ -540,7 +540,7 @@ body{
    }
    .payment{
     width: 88%;
-    height: 480px;
+    height: 90vh;
     margin-top: 52px;
     justify-content: space-around;
    }
