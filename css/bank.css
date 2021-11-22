@@ -654,3 +654,29 @@ body{
      height: 100%;
    }
  }
+
+ @media screen and (min-width : 801px) and (max-width : 1190px){
+   .cont_setname_input{
+    width: 330px;
+    height: 200px;
+   }
+   .add_name{
+     padding: 5px 15px;
+   }
+   .payment{
+    width: 360px;
+    height: 420px;
+   }
+   .payment input{
+     height: 35px;
+   }
+   .banks{
+    width: 23%;
+    top: 2%;
+   }
+   .alertbank{
+    top: 0;
+    width: 45%;
+    height: 90%;
+   }
+ }
