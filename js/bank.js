@@ -1,6 +1,7 @@
 // ::::::::::::::
 // variables
 // ::::::::::::::
+
 const banksInformation = document.querySelector('.banks');
 const fBankName = document.querySelector('.fbankname');
 const sBankName = document.querySelector('.sbankname');
@@ -10,6 +11,7 @@ const sBank = document.querySelector('.sbank');
 const tBank = document.querySelector('.tbank');
 
 const paymentForm = document.querySelectorAll('.payment input');
+const payment = document.querySelector('.payment');
 const cartNumber = document.querySelector('.cartnumber');
 const cv2 = document.querySelector('.cv2');
 const passwordForm = document.querySelector('.password');
@@ -197,13 +199,13 @@ function hideModalForSetUserName(){
         setTimeout(() => {errorFullName.style.display = 'none'},3000)
         return;
     };
-    if(innerWidth <= 500){
+    if(innerWidth <= 800){
         banksInformation.style.display = 'none';
     }else{
         banksInformation.style.display = 'unset';
     }
     document.querySelector('.payment').style.display = 'flex';
-    innerWidth <= 500 ? banksMobileMenu.style.display = 'unset' : banksMobileMenu.style.display = 'none'
+    innerWidth <= 800 ? banksMobileMenu.style.display = 'unset' : banksMobileMenu.style.display = 'none'
     contSetNameInput.style.display = 'none';
     setTimeout(() => { alertBank.style.display = 'flex';},1000)
 }
@@ -217,8 +219,18 @@ function resultEnterName(){
     inputAddName.value = null;
  }   
  
+ var number = ['0','1','2','3','4','5','6','7','8','9'];
+
 function checkName(){
-   
+
+    // you can not use numbers to  set name box
+
+    number.forEach(numbs => {
+        if(inputAddName.value.includes(numbs)){
+            inputAddName.value = ''
+            errorSweetAlert()
+        }  
+    })
     if(inputAddName.value.length > 2){
         innerInputNameValue.innerText = inputAddName.value;
         checkNameContainer.style.display = 'unset';
@@ -228,7 +240,10 @@ function checkName(){
     }
 
     if(innerWidth <= 500){
-        if(inputAddName.value.length >= 30) inputAddName.value = ''
+        if(inputAddName.value.length >= 30){
+            inputAddName.value = '';
+           checkNameContainer.style.display = 'none'
+        } 
     }
 
 }
@@ -241,7 +256,6 @@ function keyDownCheckName(){
 }
 
 function keyUpCheckName(){
-   
     if(inputAddName.value){
       setTimeout(() => {loadCheckNameIcon.setAttribute('class','spinner_icon bi bi-check')},3000)
     }
@@ -253,7 +267,7 @@ function keyUpCheckName(){
 let minutes = 150;
 window.addEventListener('DOMContentLoaded',(e) => {
    showModalForSetUserName();
-   setInterval(() => {minutes--; minutes === 0 ? location.replace('./index.html') : null},1000)
+//    setInterval(() => {minutes--; minutes === 0 ? location.replace('./index.html') : null},1000)
 })
 
 buttonAddName.addEventListener('click',(e) => {
@@ -284,43 +298,25 @@ inputAddName.addEventListener('blur',(e) =>{
 })
 
 
-// ::::::::::::::::::::
-// you can not use numbers to  set name box
-// ::::::::::::::::::::
 function errorSweetAlert(){
     Swal.fire({
         title: 'Atention...',
         text: 'You can not use numbers!',
       })
 }
-let number = ['0','1','2','3','4','5','6','7','8','9'];
-inputAddName.addEventListener('beforeinput',(e) => {
-  
-    number.forEach(num => {
-       
-       if(inputAddName.value.includes(num)){
-           e.preventDefault();
-           errorSweetAlert()
-           inputAddName.value = null;
-           innerInputNameValue.innerText = null;
-           loadCheckNameIcon.style.display = 'none';
-       }
 
-    })
-
-})
 
 // ::::::::::::::
 // menu mobile banks infomration 
 // ::::::::::::::
 
 const iconTimes = document.createElement('i');
-innerWidth > 500 ? banksMobileMenu.style.display = 'none' : banksMobileMenu.style.display = 'unset';
+innerWidth > 800 ? banksMobileMenu.style.display = 'none' : banksMobileMenu.style.display = 'unset';
 // ::::::::::::::
 // icon times for show banks information menu 
 // ::::::::::::::
 function appnedTimesBnaks(){
-    if(innerWidth <= 500){
+    if(innerWidth <= 800){
         iconTimes.setAttribute('class','bi bi-x');
         iconTimes.style.position = 'absolute';
         iconTimes.style.top = '5px';
@@ -337,16 +333,16 @@ banksMobileMenu.addEventListener('click',(e) => {
     namesBank.forEach(styles => {
         styles.style.display = 'flex'
     })
+    payment.style.display = 'none'
     banksInformation.style.display = 'unset'
     banksInformation.style.left = '0'
     banksInformation.style.top = '0'
-    banksInformation.style.width = '100%'
+    banksInformation.style.width = '70%' 
     banksInformation.style.height = '100vh'
     banksInformation.style.zIndex = '1'
     banksInformation.style.border = 'none'
     banksInformation.classList.add('slideInLeft')
     appnedTimesBnaks();
-    
 })
 // hide mneu : : : : : : : : : : : : : : : : : : :
 iconTimes.addEventListener('click',(e) => {
@@ -354,5 +350,6 @@ iconTimes.addEventListener('click',(e) => {
         styles.style.display = 'none'
     })
     banksInformation.style.width = '0';
+    payment.style.display = 'flex'
     setTimeout(() => {banksInformation.style.display = 'none';},800)
 })

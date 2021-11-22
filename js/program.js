@@ -333,6 +333,17 @@ clickButtons();
 // :::::::::::::::::::::
 
 
+function backgroundAtShowShopCart(){
+    document.querySelector('.price').style.display = 'none';
+    document.querySelector('.pointnumber').style.display = 'none';
+    document.querySelector('.crypto').style.display = 'none';
+}
+function backgroundAtHideShopCart(){
+    document.querySelector('.price').style.display = 'flex';
+    document.querySelector('.pointnumber').style.display = 'flex';
+    document.querySelector('.crypto').style.display = 'flex';
+}
+
 const showAndCloseCart = {
    shoppingCart : document.querySelector('.shoppingcart') ,
    cartIcon : document.querySelector('.cart') ,
@@ -342,13 +353,18 @@ const showAndCloseCart = {
    showCart(){
        this.cartIcon.addEventListener('click',(e) => {
        this.shoppingCart.style.display = 'flex';
+       document.body.style.overflow = 'hidden'
+       backgroundAtShowShopCart()
        })
    } ,
    closeCart(){
        this.closeIcon.addEventListener('click',() => {
        this.shoppingCart.style.display = 'none';
+       buyButton.style.display = 'none'
        this.walletLink.value = null;
        this.lengthLink.innerText = 0
+       document.body.style.overflow = 'unset'
+       backgroundAtHideShopCart()
        })
    }
 }
@@ -373,8 +389,8 @@ const walletAddress = {
      }else{
         document.querySelector('.warning').style.display = 'none' ;
      }
-
-     if(e.target.value.length > 20 && shopName.innerText){
+     
+     if(e.target.value.length > 20 && shopName.innerText && shopPrice.innerText > 0){
          buyButton.style.display = 'unset'
      }else{
         buyButton.style.display = 'none'
@@ -400,6 +416,7 @@ function stylesForAddWalletBtn(){
     if(cart) cart.style.display = 'none';
 }
 
+
 const buyButton = document.querySelector('.buybutton');
 const walletLink = document.querySelector('.walletlink');
 const alertLink = document.querySelector('.alertlink');
@@ -408,7 +425,7 @@ const shopName = document.querySelector('.shopname');
 const shoppingCart = document.querySelector('.shoppingcart') ;
 const info = document.querySelector('.info');
 const orderPage = document.querySelector('.order_page');
-const cryptoSec = document.querySelector('.crypto');
+var cryptoSec = document.querySelector('.crypto');
 
 //  add to wallet btn : : : : : : :
 
