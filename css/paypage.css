@@ -257,9 +257,34 @@ body{
          left: unset;
        }
       }
-      @media screen and (min-width : 501px) and (max-width : 1000px){
+      @media screen and (min-width : 501px) and (max-width : 904px){
         body{
           height: 100vh;
+        }
+        .thank{
+          width: 70%;
+          height: 30%;
+        }
+        h1{
+          font-size: .8em;
+        }
+        .order_page{
+          color: #fff;
+          right: 14px;
+        }
+        @keyframes transform {
+          from{transform: translateX(0);}
+          to{transform: translateX(74vw);}
+        }
+        .lds-facebook{
+          top: unset;
+          left: unset;
+        }
+      }
+      @media screen and (min-width : 905px) and (max-width : 1000px){
+        body{
+          height: 100vh;
+          background-size: 1000px;
         }
         .thank{
           width: 70%;
