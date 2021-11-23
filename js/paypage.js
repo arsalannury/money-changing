@@ -34,6 +34,5 @@ orderPage.addEventListener('click',() => {
 function changePath(){
  loader.style.display = 'inline-block';
  container.style.display = 'none';
- document.body.style.overflow = 'hidden';
  orderPage.style.display = 'none';
 }
