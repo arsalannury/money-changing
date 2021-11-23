@@ -102,6 +102,7 @@ body{
       padding: 3px;
       cursor: pointer;
       transition: all 1s ease-in-out;
+      color: #fff;
   }
   .order_page::before{
     content:'';
@@ -250,6 +251,23 @@ body{
          to{transform: translateX(74vw);}
        }
       }
-      @media screen and (min-width : 501px) and (max-width : 800px){
-        
+      @media screen and (min-width : 501px) and (max-width : 1000px){
+        body{
+          height: 100vh;
+        }
+        .thank{
+          width: 70%;
+          height: 30%;
+        }
+        h1{
+          font-size: .8em;
+        }
+        .order_page{
+          color: #fff;
+          right: 14px;
+        }
+        @keyframes transform {
+          from{transform: translateX(0);}
+          to{transform: translateX(74vw);}
+        }
       }

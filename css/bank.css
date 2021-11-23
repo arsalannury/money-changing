@@ -42,6 +42,7 @@ body{
     outline: none;
     font-size:.8em;
     color:#666;
+    overflow: auto;
 }
 .payment input::placeholder{
     color:#000;
