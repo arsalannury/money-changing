@@ -177,6 +177,8 @@ body{
       position: relative;
       width: 80px;
       height: 80px;
+      top: 300px;
+      left: 48%;
       animation: transform 1s ease alternate infinite;
     }
     .lds-facebook div {
@@ -250,6 +252,10 @@ body{
          from{transform: translateX(0);}
          to{transform: translateX(74vw);}
        }
+       .lds-facebook{
+         top: unset;
+         left: unset;
+       }
       }
       @media screen and (min-width : 501px) and (max-width : 1000px){
         body{
@@ -269,5 +275,9 @@ body{
         @keyframes transform {
           from{transform: translateX(0);}
           to{transform: translateX(74vw);}
+        }
+        .lds-facebook{
+          top: unset;
+          left: unset;
         }
       }
