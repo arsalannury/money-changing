@@ -876,6 +876,9 @@ body{
      }
     /* responsive section :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: ::*/
     @media screen and (max-width : 500px){
+      .lds-facebook{
+        top: 80%;
+      }
       .containermessage{
         height: 100vh;
       }

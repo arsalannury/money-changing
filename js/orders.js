@@ -15,7 +15,7 @@ const homeIcon = document.querySelector('.home_icon');
 const innerList = () => {  
     getOrderLocal.forEach((element,i) => {
         ordersList.innerHTML += 
-        `<li class="order_item"> <span>${i+1}</span> ${element.name} <span class="price_order">${element.price} $</span><i class="bi bi-check-circle-fill"></i> </li>`
+        `<li class="order_item"> <span>${i+1}</span> ${element.name} <span>${element.amount}</span> <span class="price_order">${element.price} $</span><i class="bi bi-check-circle-fill"></i> </li>`
     })
 }
 

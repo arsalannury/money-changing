@@ -165,6 +165,7 @@ document.body.appendChild(cart);
 
 
 function afterClickCloseCrypto(){
+    // click in your crypto and js closed menu for you  only in moblie
     cryptoSec.style.width = '30px';
     cryptoSec.style.height = '30px';
     cryptoSec.style.right = '20px';
