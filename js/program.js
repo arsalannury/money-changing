@@ -164,7 +164,19 @@ cart.setAttribute('class','fas fa-shopping-cart  cart  hvr-wobble-to-top-right')
 document.body.appendChild(cart);
 
 
-
+function afterClickCloseCrypto(){
+    cryptoSec.style.width = '30px';
+    cryptoSec.style.height = '30px';
+    cryptoSec.style.right = '20px';
+    cryptoSec.style.top = '17px';
+    cryptoSec.style.borderRadius = '50%';
+    cryptoSec.setAttribute('class','crypto animated infinite pulse')
+    var childsCrypto = cryptoSec.children;
+    Array.from(childsCrypto).forEach(element => {element.style.display = 'none'});
+    document.querySelector('.icon2').style.display = 'none' ;
+    document.querySelector('.icon1').style.top = 'none' ;
+    document.querySelector('.icon1').style.display = 'block' ;
+}
 // ::::::::::::::::::::::::
 // crypto add name after click
 // ::::::::::::::::::::::::
@@ -181,6 +193,7 @@ const cryptoNames = {
          // cart show ::::::::::::::::::::::
           this.shopName.innerText = 'Tron';
           shopPrice.innerText = 1;
+          if(innerWidth <= 500) setTimeout(() => {afterClickCloseCrypto()},200);
        })
 
        this.containerCrypto.children[3].addEventListener('click',(e) => {
@@ -190,6 +203,7 @@ const cryptoNames = {
            // cart show ::::::::::::::::::::::
             this.shopName.innerText = 'BitCoin';
             shopPrice.innerText = 46000;
+            if(innerWidth <= 500) setTimeout(() => {afterClickCloseCrypto()},200);
        })
 
        this.containerCrypto.children[4].addEventListener('click' ,(e) => {
@@ -199,6 +213,7 @@ const cryptoNames = {
            // cart show ::::::::::::::::::::::
            this.shopName.innerText = 'Ethereum';
            shopPrice.innerText = 3140;
+           if(innerWidth <= 500) setTimeout(() => {afterClickCloseCrypto()},200);
        })
 
        this.containerCrypto.children[5].addEventListener('click',(e) => {
@@ -208,6 +223,7 @@ const cryptoNames = {
            // cart show ::::::::::::::::::::::
            this.shopName.innerText = 'DogCoin';
            shopPrice.innerText = 23;
+           if(innerWidth <= 500) setTimeout(() => {afterClickCloseCrypto()},200);
        })
 
        this.containerCrypto.children[6].addEventListener('click',(e) => {
@@ -217,6 +233,7 @@ const cryptoNames = {
             // cart show ::::::::::::::::::::::
            this.shopName.innerText = 'Shibaino';
            shopPrice.innerText = 2;
+           if(innerWidth <= 500) setTimeout(() => {afterClickCloseCrypto()},200);
        })
    }
 }
