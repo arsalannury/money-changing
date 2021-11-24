@@ -960,6 +960,8 @@ body{
       left: auto;
       font-size: .8em;
       animation: color 3s ease infinite alternate;
+      border-bottom: 3px solid #fff;
+      border-radius: 4px;
       }
       @keyframes color {
         from{opacity: 100%;}
