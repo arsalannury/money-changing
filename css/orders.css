@@ -132,14 +132,14 @@ h1::first-letter{
      width: 25%;
      height: 25%;
      top: 10%;
-     background-color: #fff;
      left: 38%;
-     box-shadow: 0 0 5px #6f477d;
-     border-radius: 3px;
+     background: #EEF0F4;
+     border-radius: 4%;
+     box-shadow: 9.91px 9.91px 15px #D9DADE, -9.91px -9.91px 15px #FFFFFF;
  }
- h2{
-     letter-spacing: .1em;
+ .swal i {
      color: #d00000;
+     font-size: 2em;
  }
  .text-swal{
      font-size: .8em;
@@ -150,10 +150,11 @@ h1::first-letter{
      justify-content: space-between;
      width: 130px;
  }
- .delete{
+ .delete,
+ .cansel{
      border: none;
      outline: none;
-     background-color: #fff;
+     background-color: #EEF0F4;
      cursor: pointer;
  }
  .delete::before{
@@ -169,12 +170,6 @@ h1::first-letter{
     width: 47px; 
     height: 4px; 
     background-color: #70e000;
- }
- .cansel{
-    border: none;
-    outline: none;
-    background-color: #fff;
-    cursor: pointer;
  }
 
  .cansel::before{
@@ -192,5 +187,31 @@ h1::first-letter{
      background-color: #d00000;
   }
 
+/*  responsive page : : : : : : : : : : : : : : : : : : */
 
-  
+@media screen and (max-width : 500px){
+    .container__orders{
+        padding: 15px 10px;
+    }
+    .home_icon{
+        left: 15%;
+    }
+    .swal_cont .swal{
+     left: unset;
+     width: 90%;
+     height: 30%;
+    }
+}
+@media screen and (min-width : 501px) and (max-width : 1150px){
+    .container__orders{
+        padding: 15px 50px;
+    }
+    .home_icon{
+        left: 12%;
+    }
+    .swal_cont .swal{
+        width: 430px;
+        left: unset;
+        height: 260px;
+    }
+}
