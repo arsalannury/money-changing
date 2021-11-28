@@ -86,6 +86,9 @@ h1::first-letter{
  .order_item i{
      color: #38b000;
  }
+ .order_item .trash_btn{
+     color: #d00000;
+ }
  .clear_icon{
      position: absolute;
      top: 90%;
@@ -186,7 +189,41 @@ h1::first-letter{
      height: 4px; 
      background-color: #d00000;
   }
-
+  .swal_cont_delete_order_onebyone{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1055;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    outline: 0;
+    background: rgba(0,0,0,0.70);
+    display: none;
+    align-items: center;
+    justify-content: center;
+  }
+  .swal_cont_delete_order_onebyone .swal_delete{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 250px;
+    width: 30%;
+    background-color: #fff;
+    border-radius: 5px;
+  }
+  .delete_onebyone_icon{
+      font-size: 2em;
+      color: #d00000;
+  }
+ .buttons_onebyone{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+ }
 /*  responsive page : : : : : : : : : : : : : : : : : : */
 
 @media screen and (max-width : 500px){

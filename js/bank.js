@@ -1,7 +1,6 @@
 // ::::::::::::::
 // variables
 // ::::::::::::::
-
 const banksInformation = document.querySelector('.banks');
 const fBankName = document.querySelector('.fbankname');
 const sBankName = document.querySelector('.sbankname');
@@ -267,7 +266,7 @@ function keyUpCheckName(){
 let minutes = 150;
 window.addEventListener('DOMContentLoaded',(e) => {
    showModalForSetUserName();
-   setInterval(() => {minutes--; minutes === 0 ? location.replace('./index.html') : null},1000)
+//    setInterval(() => {minutes--; minutes === 0 ? location.replace('./index.html') : null},1000)
 })
 
 buttonAddName.addEventListener('click',(e) => {
