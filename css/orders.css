@@ -50,13 +50,15 @@ h1::first-letter{
     background: #7F00FF; 
     background: -webkit-linear-gradient(to right, #E100FF, #7F00FF); 
     background: linear-gradient(to right, #E100FF, #7F00FF);
-    color: #000;
+    color: #fff;
     display: flex;
     align-items: center;
     justify-content: space-around;
     cursor: pointer;
 }
-
+.title span {
+    padding-right:5px;
+}
 .fadeInLeft {
     -webkit-animation-name: fadeInLeft;
     animation-name: fadeInLeft;
@@ -212,7 +214,12 @@ h1::first-letter{
  }
 
 /*  responsive page : : : : : : : : : : : : : : : : : : */
+@media screen and (max-width : 400px){
+    .title span{
+      font-size: .8em;
+    }
 
+}
 @media screen and (max-width : 500px){
     .container__orders{
         padding: 15px 10px;
@@ -228,7 +235,6 @@ h1::first-letter{
      width: 90%;
      height: 30%;
     }
-
 }
 @media screen and (min-width : 501px) and (max-width : 1150px){
     .container__orders{
