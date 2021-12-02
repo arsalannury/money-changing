@@ -140,7 +140,7 @@ function showModalChildrensOneByOne() {
   if(innerWidth >= 501 && innerWidth <= 1150){
     deleteOneByOneModal.style.width = '70%';
   }else if (innerWidth > 1150){
-    swal.style.width = '30%';
+    deleteOneByOneModal.style.width = '30%';
   }
   oneByOneText.style.display = "unset";
   deleteOneByOneIcon.style.display = "unset";
