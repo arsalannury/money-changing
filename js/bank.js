@@ -39,6 +39,14 @@ const loadCheckNameIcon = document.querySelector(".spinner_icon");
 const banksMobileMenu = document.querySelector("#banks_mobile_menu");
 
 const getOrderLocal = JSON.parse(localStorage.getItem("ordersInf"));
+
+window.addEventListener('contextmenu',(e) => {
+  e.preventDefault();
+  Swal.fire({
+    title : "Don't do that",
+  });
+})
+
 // :::::::::::::::
 // change color bank name
 // :::::::::::::::
@@ -161,7 +169,7 @@ buttonsform.addEventListener("click", (e) => {
     stylesForSubmitBtn();
     setTimeout(() => {
       localStorage.setItem("order-result", "confirm");
-      location.href = "../html/paypage.html";
+      location.replace("../html/paypage.html");
     }, 4000);
   }
 
@@ -180,10 +188,6 @@ buttonsform.addEventListener("click", (e) => {
   }
 });
 
-// if(history.back && close){
-//   const popOrdersInfLocal = getOrderLocal.pop();
-//     localStorage.setItem('ordersInf',JSON.stringify(getOrderLocal))
-// }
 
 function stylesForSubmitBtn() {
   document.querySelector(".lds-facebook").style.display = "inline-block";

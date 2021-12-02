@@ -47,6 +47,7 @@ window.onload = function () {
     if (ordersList.lastElementChild)
       ordersList.lastElementChild.style.display = "none";
   }
+  document.querySelector('.title').style.display = 'flex'
   trash();
 };
 

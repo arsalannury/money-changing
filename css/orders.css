@@ -218,7 +218,10 @@ h1::first-letter{
     .title span{
       font-size: .8em;
     }
-
+    .order_item,
+    .order_item span{
+        font-size: .9em;
+    }
 }
 @media screen and (max-width : 500px){
     .container__orders{
@@ -235,6 +238,7 @@ h1::first-letter{
      width: 90%;
      height: 30%;
     }
+    
 }
 @media screen and (min-width : 501px) and (max-width : 1150px){
     .container__orders{

@@ -19,7 +19,7 @@ const homeButton = document.querySelector('.buttonfinish');
 homeButton.addEventListener('click',(e) => {
     changePath()
     setTimeout(() => {
-    location.href = './index.html'
+    location.replace('./index.html')
     },500)
 })
 
