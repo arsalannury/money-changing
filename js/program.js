@@ -160,7 +160,7 @@ showCurrency.showMenu();
 // :::::::::::::::::::::::::::::::::::
 
 const cart = document.createElement('i');
-cart.setAttribute('class','fas fa-shopping-cart  cart  hvr-wobble-to-top-right');
+cart.setAttribute('class','bi bi-currency-dollar  cart  hvr-wobble-to-top-right');
 document.body.appendChild(cart);
 
 
@@ -456,6 +456,12 @@ buyButton.addEventListener('click',(e) => {
     document.querySelector('.lds-facebook').style.display = 'none';
     },3000)
     localStorage.removeItem('order-result');
+    if(localStorage.getItem('beforeunload')){
+        localStorage.removeItem('beforeunload')
+    }
+    if(localStorage.getItem('canselPayIsTrue')){
+        localStorage.removeItem('canselPayIsTrue')
+    }
     walletLink.value = null;
     orderPage.style.display = 'none'
 })

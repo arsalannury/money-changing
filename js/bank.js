@@ -83,6 +83,10 @@ banksInformation.addEventListener("click", (e) => {
 
 alertButton.addEventListener("click", (e) => {
   alertBank.style.display = "none";
+ if(innerWidth <= 800){
+  mobileBankOpen()
+  appnedTimesBnaks()
+ }
 });
 // :::::::::::::
 // remove input value after refresh page
@@ -167,6 +171,7 @@ buttonsform.addEventListener("click", (e) => {
       document.querySelector("#alertsafecode").style.display = "none";
     }
     stylesForSubmitBtn();
+    localStorage.setItem('beforeunload','unloadIsFalse')
     setTimeout(() => {
       localStorage.setItem("order-result", "confirm");
       location.replace("../html/paypage.html");
@@ -182,6 +187,7 @@ buttonsform.addEventListener("click", (e) => {
     const popOrdersInfLocal = getOrderLocal.pop();
     localStorage.setItem('ordersInf',JSON.stringify(getOrderLocal));
     localStorage.setItem("order-result", "confirm");
+    localStorage.setItem('canselPayIsTrue','TRUE')
     setTimeout(() => {
       location.href = "../html/index.html";
     }, 1000);
@@ -313,10 +319,10 @@ function keyUpCheckName() {
 // ::::::::::::::::::::
 // listener for add name section
 // ::::::::::::::::::::
-let minutes = 150;
+let minutes = 120;
 window.addEventListener("DOMContentLoaded", (e) => {
   showModalForSetUserName();
-  //    setInterval(() => {minutes--; minutes === 0 ? location.replace('./index.html') : null},1000)
+     setInterval(() => {minutes--; minutes === 0 ? location.replace('./index.html') : null},1000)
 });
 
 buttonAddName.addEventListener("click", (e) => {
@@ -410,4 +416,27 @@ function mobileBankClose() {
   setTimeout(() => {
     banksInformation.style.display = "none";
   }, 800);
+}
+function mobileBankOpen(){
+  payment.style.display = "none";
+  banksInformation.style.display = "unset";
+  banksInformation.style.left = "0";
+  banksInformation.style.top = "0";
+  banksInformation.style.width = "70%";
+  banksInformation.style.height = "100vh";
+  banksInformation.style.zIndex = "1";
+  banksInformation.style.border = "none";
+  banksInformation.classList.add("slideInLeft");
+}
+
+window.addEventListener('beforeunload',(e)=> {
+  deleteOrderAfterClosePage()
+})
+
+function deleteOrderAfterClosePage(){
+  if(localStorage.getItem('beforeunload') === null && localStorage.getItem('canselPayIsTrue') === null){
+    const popOrdersInfLocal = getOrderLocal.pop();
+    localStorage.setItem('ordersInf',JSON.stringify(getOrderLocal));
+    localStorage.setItem("order-result", "confirm");
+  }
 }
