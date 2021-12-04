@@ -12,11 +12,12 @@ const changeBackground = {
     colorBlue(){
         this.toggle.addEventListener('click',() => {
             this.toggle.style.display = 'none' ;
+            document.body.style.transition = 'all .5s ease';
             document.body.style.backgroundColor = '#000495' ;
 
             
-            this.secondToggle.style.backgroundColor = '#000495' ,
-            this.secondToggle.style.display = 'block' 
+            this.secondToggle.style.backgroundColor = '#000495'; 
+            this.secondToggle.style.display = 'block' ;
         
 
             
