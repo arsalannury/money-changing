@@ -11,30 +11,46 @@ const changeBackground = {
     crypto : document.querySelector('.crypto') ,
     colorBlue(){
         this.toggle.addEventListener('click',() => {
-            this.toggle.style.display = 'none' ;
-            document.body.style.transition = 'all .5s ease';
-            document.body.style.backgroundColor = '#000495' ;
-
             
-            this.secondToggle.style.backgroundColor = '#000495'; 
+            this.toggle.style.display = 'none' ;
+            document.body.style.opacity = '0%'
+            setTimeout(()=>{
+                document.body.style.backgroundColor = '#000495';
+                document.body.style.opacity = '100%' ;
+            },600)
+
+            this.secondToggle.style.opacity = '0%'; 
+            setTimeout(()=>{
+                this.secondToggle.style.backgroundColor = '#000495'; 
+                this.secondToggle.style.opacity = '100%'; 
+            },600)
             this.secondToggle.style.display = 'block' ;
         
 
-            
-            this.price.style.background = 'linear-gradient(45deg, #000486, #00049f)' ,
-            this.price.style.boxShadow = ' 20px -20px 26px #00036d,-20px 20px 26px #0005bd'
+            this.price.style.opacity = '0%'
+            setTimeout(()=>{
+                this.price.style.background = 'linear-gradient(45deg, #000486, #00049f)' ;
+                this.price.style.boxShadow = ' 20px -20px 26px #00036d,-20px 20px 26px #0005bd' ;
+                this.price.style.opacity = '100%'
+            },600)
             
            
-           
-            this.points.style.background = 'linear-gradient(45deg, #000486, #00049f)' ,
-            this.points.style.boxShadow = ' 20px -20px 26px #00036d,-20px 20px 26px #0005bd'
+            this.points.style.opacity = '0%'
+            setTimeout(() => {
+                this.points.style.background = 'linear-gradient(45deg, #000486, #00049f)' ;
+                this.points.style.boxShadow = ' 20px -20px 26px #00036d,-20px 20px 26px #0005bd' ;
+                this.points.style.opacity = '100%'
+            },600)
             
             
-                
-                this.crypto.style.background = 'linear-gradient(45deg, #000486, #00049f)' ,
-                this.crypto.style.boxShadow = ' 20px -20px 26px #00036d,-20px 20px 26px #0005bd'
-                if(innerWidth <= 500)
-                    this.crypto.style.boxShadow = 'none'
+                this.crypto.style.opacity = '0%'
+                setTimeout(()=>{
+                    this.crypto.style.background = 'linear-gradient(45deg, #000486, #00049f)' ,
+                    this.crypto.style.boxShadow = ' 20px -20px 26px #00036d,-20px 20px 26px #0005bd'
+                    this.crypto.style.opacity = '100%'
+                    if(innerWidth <= 500)
+                        this.crypto.style.boxShadow = 'none'
+                },600)
 
         })
     } ,
@@ -43,23 +59,36 @@ const changeBackground = {
     this.secondToggle.addEventListener('click',() => {
         this.secondToggle.style.display = 'none';
         this.toggle.style.display = 'block' ;
-        document.body.style.backgroundColor = '#684275'
+        document.body.style.opacity = '0%';
+        setTimeout(()=>{
+            document.body.style.backgroundColor = '#684275';
+            document.body.style.opacity = '100%';
+        },600)
         
-  
-            this.price.style.background = 'linear-gradient(45deg, #5e3b69, #6f477d)' 
-            this.price.style.boxShadow = ' 22px -22px 44px #462c4e,-22px 22px 44px #8a589c'
+            this.price.style.opacity = '0%'
+            setTimeout(()=>{
+                this.price.style.background = 'linear-gradient(45deg, #5e3b69, #6f477d)' 
+                this.price.style.boxShadow = ' 22px -22px 44px #462c4e,-22px 22px 44px #8a589c'
+                this.price.style.opacity = '100%'
+            },600)
   
 
-  
-            this.points.style.background = 'linear-gradient(45deg, #5e3b69, #6f477d)'
-            this.points.style.boxShadow = ' 22px -22px 44px #462c4e,-22px 22px 44px #8a589c'
+            this.points.style.opacity = '0%'
+            setTimeout(()=>{
+                this.points.style.background = 'linear-gradient(45deg, #5e3b69, #6f477d)'
+                this.points.style.boxShadow = ' 22px -22px 44px #462c4e,-22px 22px 44px #8a589c'
+                this.points.style.opacity = '100%'
+            },600)
         
 
-            
-            this.crypto.style.background = 'linear-gradient(45deg, #5e3b69, #6f477d)'
-            this.crypto.style.boxShadow = ' 22px -22px 44px #462c4e,-22px 22px 44px #8a589c'
-            if(innerWidth <= 500)
-                this.crypto.style.boxShadow = 'none'
+            this.crypto.style.opacity = '0%'
+            setTimeout(()=>{
+                this.crypto.style.background = 'linear-gradient(45deg, #5e3b69, #6f477d)'
+                this.crypto.style.boxShadow = ' 22px -22px 44px #462c4e,-22px 22px 44px #8a589c'
+                this.crypto.style.opacity = '100%'
+                if(innerWidth <= 500)
+                    this.crypto.style.boxShadow = 'none'
+            },600)
 
 
     })

@@ -22,7 +22,7 @@ body{
     flex-wrap:wrap;
     background: #684275;
     position: relative;
-    
+    transition: all .5s ease;
 }
 
 .order_page{
@@ -32,7 +32,6 @@ body{
  color: #fff;
  cursor: pointer;
 }
-
 
 .background{
     background-image: url(../images/44c88d839081875e137dc0f8d3c461be.webp);
@@ -53,7 +52,9 @@ body{
     top:20px;
     left: 20px;
     cursor: pointer;
+    transition: all .5 ease;
 }
+
 .secondtoggle{
     display:none;
     width: 25px;
@@ -64,6 +65,7 @@ body{
     top: 20px;
     left: 20px;
     cursor: pointer;
+    transition: all .5 ease;
 }
 .pulse {
   -webkit-animation-name: pulse;
